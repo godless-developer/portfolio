@@ -11,6 +11,7 @@ import {
   Server,
   Smartphone,
   Sparkles,
+  SplinePointer,
 } from "lucide-react";
 
 export default function SkillsSection() {
@@ -67,14 +68,19 @@ export default function SkillsSection() {
       color: "bg-orange-100 text-orange-600",
     },
     {
-      name: "Docker",
-      icon: <Layers className="h-6 w-6" />,
-      color: "bg-blue-100 text-blue-600",
+      name: "AI",
+      icon: <SplinePointer color="#dd08b6" className="h-6 w-6" />,
+      color: "bg-purple-100 text-purple-600",
     },
     {
       name: "Responsive Design",
       icon: <Smartphone className="h-6 w-6" />,
       color: "bg-purple-100 text-purple-600",
+    },
+    {
+      name: "UI/UX",
+      icon: <Sparkles className="h-6 w-6" />,
+      color: "bg-pink-100 text-pink-600",
     },
     {
       name: "UI/UX",

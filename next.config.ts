@@ -5,3 +5,9 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+// next.config.js
+module.exports = {
+  images: {
+    domains: ["images.remotePatterns.com", "f4.bcbits.com", "e0.pxfuel.com"],
+  },
+};

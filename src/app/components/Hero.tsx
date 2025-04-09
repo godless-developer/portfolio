@@ -20,13 +20,13 @@ export default function HeroSection() {
 
   return (
     <div
-      className=" flex flex-col gap-10 w-full h-[800px] justify-center"
-      style={{
-        backgroundImage:
-          'url("https://e0.pxfuel.com/wallpapers/348/871/desktop-wallpaper-honeycomb-red-and-black-honeycomb.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className=" flex flex-col gap-10 w-full h-[400px] justify-center"
+      // style={{
+      //   backgroundImage:
+      //     'url("https://e0.pxfuel.com/wallpapers/348/871/desktop-wallpaper-honeycomb-red-and-black-honeycomb.jpg")',
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
     >
       <div className="z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -61,16 +61,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Button size="lg" className="group">
+            {/* <Button size="lg" className="group">
               View my work
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Link
-              href="#contact"
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-pink-500 transition-colors"
-            >
-              Contact me <span aria-hidden="true">→</span>
-            </Link>
+            </Button> */}
           </motion.div>
         </div>
       </div>

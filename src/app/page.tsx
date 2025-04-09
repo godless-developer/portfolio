@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Zap } from "lucide-react";
+import { CodeXml, Github, Linkedin, Mail, Zap } from "lucide-react";
 import Link from "next/link";
 import HeroSection from "./components/Hero";
 import AboutSection from "./components/About";
@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <div className="min-h-screen w-full  bg-white">
-      <header className="sticky top-0 z-40 w-[100%] border-b bg-white/80 backdrop-blur-sm flex justify-center">
+      <header className="sticky top-0 z-40 w-[100%] border-b bg-white/80 backdrop-blur-[7px] flex justify-center">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Zap className="h-6 w-6 text-pink-500" />
+            <CodeXml color="#f443d4" />
             <span className="font-mono text-xl font-bold">Tuk</span>
           </Link>
           <nav className="hidden md:flex gap-6">
@@ -66,7 +66,13 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="flex flex-col items-center justify-center w-full">
+      <main className="flex flex-col items-center relative justify-center w-full">
+        <Link
+          href="#contact"
+          className="text-sm font-semibold leading-6 backdrop-blur-[7px] bg-gray-100 py-2 px-3 rounded-xl top-20 right-10 text-gray-900 hover:text-pink-500 transition-colors fixed "
+        >
+          Contact me <span aria-hidden="true">→</span>
+        </Link>
         <HeroSection />
         <AboutSection />
         <SkillsSection />
@@ -82,7 +88,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" asChild>
               <Link
-                href="https://github.com"
+                href="https://github.com/godless-developer"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Github } from "lucide-react";
 import {
   Card,
   CardDescription,
@@ -16,19 +16,20 @@ import { Badge } from "@/components/ui/badge";
 
 export default function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const projects = [
     {
       title: "Weather App",
       description:
-        "A full-featured online store with cart, checkout, and payment integration.",
+        "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
       image: "/projectWeather.png",
       tags: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
-      demoUrl: "#",
+      demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "#",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Movie App",
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
       image: "/placeholder.svg?height=400&width=600",
@@ -37,7 +38,7 @@ export default function ProjectsSection() {
       githubUrl: "#",
     },
     {
-      title: "Task Management App",
+      title: "Food Delivery",
       description:
         "Collaborative task manager with real-time updates and team features.",
       image: "/placeholder.svg?height=400&width=600",
@@ -46,7 +47,7 @@ export default function ProjectsSection() {
       githubUrl: "#",
     },
     {
-      title: "Weather Forecast App",
+      title: "Buy Me Coffee",
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
       image: "/placeholder.svg?height=400&width=600",
@@ -57,7 +58,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 ">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,7 +87,7 @@ export default function ProjectsSection() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <Card className="overflow-hidden border-2 border-gray-100 transition-all duration-300 hover:border-pink-300 hover:shadow-lg hover:-translate-y-1 hover:scale-105 hover:transform-view cursor-pointer">
+              <Card className="overflow-hidden border-2 border-gray-100 transition-all duration-300 hover:border-pink-300 hover:shadow-lg hover:scale-105 hover:transform-view cursor-pointer">
                 <div className="relative overflow-hidden">
                   <div
                     className="aspect-video w-full bg-gray-100 object-cover transition-transform duration-500"
@@ -102,7 +103,7 @@ export default function ProjectsSection() {
                     <div className="flex gap-4">
                       <Button size="sm" variant="default" asChild>
                         <Link
-                          href="https://weather-app-tukka.vercel.app/"
+                          href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center"
@@ -134,8 +135,19 @@ export default function ProjectsSection() {
                   <CardTitle className="font-mono text-xl">
                     {project.title}
                   </CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardDescription className="h-[130px] relative overflow-scroll scroll-bar-none ">
+                    {project.description}
+                    <div className="sticky bottom-0 left-[44%] flex items-center justify-center z-0">
+                      <ChevronDown />
+                    </div>
+                  </CardDescription>
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none transition-opacity duration-300 ${
+                      isHovered ? "opacity-0" : "opacity-100"
+                    }`}
+                  ></div>
                 </CardHeader>
+
                 <CardFooter>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (

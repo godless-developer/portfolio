@@ -26,16 +26,16 @@ export default function ProjectsSection() {
       image: "/projectWeather.png",
       tags: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
-      githubUrl: "#",
+      githubUrl: "https://github.com/godless-developer/weather-app",
     },
     {
       title: "Movie App",
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/projectMovie.png",
       tags: ["React", "D3.js", "Node.js", "Express"],
-      demoUrl: "https://weather-app-tukka.vercel.app/",
-      githubUrl: "#",
+      demoUrl: "https://movie-tuka.vercel.app/",
+      githubUrl: "https://github.com/godless-developer/movie-z",
     },
     {
       title: "Food Delivery",
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
             <span className="block h-1.5 w-20 bg-pink-500 mx-auto mt-2"></span>
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Check out some of my recent work
+            Check out some of my recent work and experience
           </p>
         </motion.div>
 

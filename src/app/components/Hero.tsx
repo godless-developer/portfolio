@@ -20,7 +20,7 @@ export default function HeroSection() {
 
   return (
     <div
-      className=" flex flex-col gap-10 w-full h-[400px] justify-center"
+      className=" flex flex-col gap-10 w-full h-[400px] justify-center bg-amber-800"
       // style={{
       //   backgroundImage:
       //     'url("https://e0.pxfuel.com/wallpapers/348/871/desktop-wallpaper-honeycomb-red-and-black-honeycomb.jpg")',

@@ -44,8 +44,36 @@ const uploadImage = async (file: File | null) => {
 export default function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [file, setFile] = useState<any>(null);
+  const [img, setImg] = useState<any>(null);
+
+  const onFileUpload = (event: any) => {
+    const file = event.target.files[0];
+    if (file) {
+      setFile(file);
+      setImg(URL.createObjectURL(file));
+    }
+  };
 
   const projects = [
+    {
+      title: "Viducate",
+      description:
+        "Location-based weather app with 7-day forecasts and interactive maps.",
+      image: "/placeholder.svg?height=400&width=600",
+      tags: ["React Native", "OpenWeather API", "Geolocation"],
+      demoUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Food Delivery",
+      description:
+        "Collaborative task manager with real-time updates and team features.",
+      image: "/placeholder.svg?height=400&width=600",
+      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      demoUrl: "#",
+      githubUrl: "#",
+    },
     {
       title: "Weather App",
       description:
@@ -63,24 +91,6 @@ export default function ProjectsSection() {
       tags: ["React", "D3.js", "Node.js", "Express"],
       demoUrl: "https://movie-tuka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/movie-z",
-    },
-    {
-      title: "Food Delivery",
-      description:
-        "Collaborative task manager with real-time updates and team features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Buy Me Coffee",
-      description:
-        "Location-based weather app with 7-day forecasts and interactive maps.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React Native", "OpenWeather API", "Geolocation"],
-      demoUrl: "#",
-      githubUrl: "#",
     },
   ];
 

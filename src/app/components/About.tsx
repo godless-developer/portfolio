@@ -42,7 +42,9 @@ export default function AboutSection() {
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300">
                 <Image
-                  src={"https://f4.bcbits.com/img/a3421063206_2.jpg"}
+                  src={
+                    "https://img.freepik.com/premium-photo/programmer-working-new-software-while-sitting_995162-2567.jpg"
+                  }
                   alt={"Developer portrait"}
                   width={400}
                   height={400}

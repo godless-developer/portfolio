@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { CodeXml, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
-import HeroSection from "@/app/components/Hero";
-import { AboutSection } from "@/app/components/About";
-import { SkillsSection } from "@/app/components/Skilss";
-import { ProjectsSection } from "@/app/components/Project";
-import ContactSection from "@/app/components/Contacts";
+import HeroSection from "./components/Hero";
+import AboutSection from "./components/About";
+import SkillsSection from "./components/Skilss";
+import ProjectsSection from "./components/Project";
+import ContactMe from "./components/ContactMe";
 
 export default function Home() {
+  console.log(HeroSection); // Should not be undefined
+
   return (
     <div className="min-h-screen w-full  text-white">
       <header className="fixed top-0 z-40 w-[100%]  bg-white/10 backdrop-blur-[7px] flex justify-center">
@@ -79,7 +81,7 @@ export default function Home() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
-          <ContactSection />
+          <ContactMe />
         </div>
       </main>
     </div>

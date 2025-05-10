@@ -1,9 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Code, Gamepad, HeartPulse, Music } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
-
 import {
   Dialog,
   DialogContent,
@@ -12,8 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
-export function AboutSection() {
+const AboutSection = () => {
   const interests = [
     { icon: <Code className="h-6 w-6" />, label: "Coding" },
     { icon: <HeartPulse className="h-6 w-6" />, label: "Health" },
@@ -27,47 +22,16 @@ export function AboutSection() {
       className="pb-20 pt-60 px-8 z-10 absolute top-160 md:top-190"
     >
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-3xl text-center mb-16"
-        >
+        <div className="mx-auto max-w-3xl text-center mb-16">
           <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
             About Me
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            {/* <div className="relative">
-              <div className="aspect-square overflow-hidden ml-20 rounded-3xl h-[500px] w-[500px]">
-                <Image
-                  src={
-                    "https://img.freepik.com/premium-photo/programmer-working-new-software-while-sitting_995162-2567.jpg"
-                  }
-                  alt={"Developer portrait"}
-                  width={2000}
-                  height={2000}
-                  className="h-full w-full rounded-3xl object-cover"
-                />
-              </div>
-            </div> */}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
+          <div></div>
+          <div>
             <h3 className="text-2xl font-bold mb-4 font-mono">
               Hey there! I&apos;m{" "}
               <span className="text-orange-700">Battulga</span>
@@ -117,9 +81,10 @@ export function AboutSection() {
                 </Dialog>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+export default AboutSection;

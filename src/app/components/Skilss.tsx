@@ -14,7 +14,7 @@ import {
   SplinePointer,
 } from "lucide-react";
 
-export function SkillsSection() {
+const SkillsSection = () => {
   const frontendSkills = [
     {
       name: "React",
@@ -209,4 +209,5 @@ export function SkillsSection() {
       </div>
     </section>
   );
-}
+};
+export default SkillsSection;

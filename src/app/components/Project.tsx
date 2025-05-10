@@ -20,7 +20,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export function ProjectsSection() {
+const ProjectsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects = [
@@ -314,4 +314,5 @@ export function ProjectsSection() {
       </div>
     </section>
   );
-}
+};
+export default ProjectsSection;

@@ -1,4 +1,4 @@
-import { CodeXml, Github, Linkedin, Mail, Zap } from "lucide-react";
+import { CodeXml, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import HeroSection from "./components/Hero";
 import AboutSection from "./components/About";

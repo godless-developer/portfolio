@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { MessageSquare, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
   CardContent,
   CardDescription,
   CardHeader,
@@ -16,7 +15,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { div } from "framer-motion/client";
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({
@@ -89,7 +87,7 @@ export default function ContactSection() {
                   <div></div>
                 ) : (
                   <CardDescription className="py-5 text-gray-400">
-                    I'll get back to you as soon as possible!
+                    I&apos;ll get back to you as soon as possible!
                   </CardDescription>
                 )}
               </CardHeader>
@@ -100,7 +98,7 @@ export default function ContactSection() {
                       Message sent successfully!
                     </h3>
                     <p className="text-green-700">
-                      Thanks for reaching out. I'll get back to you soon.
+                      Thanks for reaching out. I&apos;ll get back to you soon.
                     </p>
                   </div>
                 ) : (

@@ -1,28 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Code,
-  Coffee,
-  Gamepad,
-  HeartPulse,
-  Music,
-  Sprout,
-  Trophy,
-} from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
+import { Code, Gamepad, HeartPulse, Music } from "lucide-react";
+import { CardContent } from "@/components/ui/card";
 
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
   const interests = [
@@ -80,7 +69,8 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <h3 className="text-2xl font-bold mb-4 font-mono">
-              Hey there! I'm <span className="text-orange-700">Battulga</span>
+              Hey there! I&apos;m{" "}
+              <span className="text-orange-700">Battulga</span>
             </h3>
             <p className="text-white mb-6">
               A passionate fullstack developer who loves creating beautiful and
@@ -89,10 +79,10 @@ export default function AboutSection() {
               clean code and intuitive user experiences.
             </p>
             <p className="text-white mb-8">
-              When I'm not coding, you can find me exploring new tech, playing
-              video games, or enjoying a good cup of coffee. I believe in
-              continuous learning and pushing the boundaries of what's possible
-              on the web.
+              When I&apos;m not coding, you can find me exploring new tech,
+              playing video games, or enjoying a good cup of coffee. I believe
+              in continuous learning and pushing the boundaries of what&apos;s
+              possible on the web.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {interests.map((interest, index) => (

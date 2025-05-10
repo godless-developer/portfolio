@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -21,46 +21,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET!;
-const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-
-const uploadImage = async (file: File | null) => {
-  if (!file) {
-    return null;
-  }
-
-  const formData = new FormData();
-  formData.append("file", file);
-  formData.append("upload_preset", UPLOAD_PRESET);
-
-  try {
-    const response = await fetch(
-      `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
-    const result = await response.json();
-    return result.secure_url;
-  } catch (error: unknown) {
-    return { error: "failed to upload image" };
-  }
-};
-
 export default function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [file, setFile] = useState<any>(null);
-  const [img, setImg] = useState<any>(null);
-
-  const onFileUpload = (event: any) => {
-    const file = event.target.files[0];
-    if (file) {
-      setFile(file);
-      setImg(URL.createObjectURL(file));
-    }
-  };
 
   const projects = [
     {

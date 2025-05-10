@@ -1,23 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
   return (
     <div className=" flex flex-col gap-10 px-8 w-full h-[400px] justify-center absolute z-10 top-68 md:top-80">
       <div className="z-10">
@@ -29,7 +13,7 @@ export default function HeroSection() {
           >
             <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl">
               <span className="text-orange-700">Hello!</span>
-              <span className="text-white">I'm a</span>
+              <span className="text-white">I&apos;m a</span>
 
               <span className="relative inline-block">
                 <span className="relative z-10 text-white">Fullstack Dev</span>
@@ -47,7 +31,7 @@ export default function HeroSection() {
             <p className="text-gray-400 text-shadow-2xl">
               I build cool stuff for the web with modern technologies.
               <br />
-              Let's create something awesome together!
+              Let&apos;s create something awesome together!
             </p>
           </motion.div>
 

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -21,7 +20,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function ProjectsSection() {
+export function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects = [

@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-export default function AboutSection() {
+export function AboutSection() {
   const interests = [
     { icon: <Code className="h-6 w-6" />, label: "Coding" },
     { icon: <HeartPulse className="h-6 w-6" />, label: "Health" },

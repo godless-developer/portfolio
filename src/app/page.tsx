@@ -1,11 +1,11 @@
+import { Button } from "@/components/ui/button";
 import { CodeXml, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
-import HeroSection from "./components/Hero";
-import AboutSection from "./components/About";
-import SkillsSection from "./components/Skilss";
-import ProjectsSection from "./components/Project";
-import ContactSection from "./components/Contacts";
-import { Button } from "@/components/ui/button";
+import HeroSection from "@/app/components/Hero";
+import { AboutSection } from "@/app/components/About";
+import { SkillsSection } from "@/app/components/Skilss";
+import { ProjectsSection } from "@/app/components/Project";
+import ContactSection from "@/app/components/Contacts";
 
 export default function Home() {
   return (
@@ -82,36 +82,6 @@ export default function Home() {
           <ContactSection />
         </div>
       </main>
-      {/* <footer className="border-t py-6 md:py-0 flex justify-center z-10 absolute">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
-            Built with <span className="text-pink-500">♥</span> using Next.js
-            and Tailwind CSS
-          </p>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" asChild>
-              <Link
-                href="https://github.com/godless-developer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 }

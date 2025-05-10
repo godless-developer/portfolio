@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+"use client";
+import "@/i18n";
 import { CodeXml, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import HeroSection from "./components/Hero";
@@ -6,10 +7,13 @@ import AboutSection from "./components/About";
 import SkillsSection from "./components/Skilss";
 import ProjectsSection from "./components/Project";
 import ContactMe from "./components/ContactMe";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
+import type { AppProps } from "next/app";
+import { appWithTranslation } from "next-i18next";
 
-export default function Home() {
-  console.log(HeroSection); // Should not be undefined
-
+export default function Home({ Component, pageProps }: AppProps) {
+  const { t } = useTranslation("common");
   return (
     <div className="min-h-screen w-full  text-white">
       <header className="fixed top-0 z-40 w-[100%]  bg-white/10 backdrop-blur-[7px] flex justify-center">
@@ -23,25 +27,25 @@ export default function Home() {
               href="#about"
               className="text-sm font-medium hover:text-orange-700 transition-colors"
             >
-              About
+              {t("About")}
             </Link>
             <Link
               href="#skills"
               className="text-sm font-medium hover:text-orange-700 transition-colors"
             >
-              Skills
+              {t("Skills")}
             </Link>
             <Link
               href="#projects"
               className="text-sm font-medium hover:text-orange-700 transition-colors"
             >
-              Projects
+              {t("Projects")}
             </Link>
             <Link
               href="#contact"
               className="text-sm font-medium hover:text-orange-700 transition-colors"
             >
-              Contact
+              {t("Contact")}
             </Link>
           </nav>
           <div className="flex items-center gap-4">
@@ -61,10 +65,8 @@ export default function Home() {
               <Linkedin className="h-5 w-5 text-gray-600 hover:text-orange-700 transition-colors" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Button size="sm" className="hidden md:flex">
-              <Mail className="mr-2 h-4 w-4" />
-              Say Hello
-            </Button>
+
+            <LanguageSwitcher {...pageProps} />
           </div>
         </div>
       </header>

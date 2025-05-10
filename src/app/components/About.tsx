@@ -63,10 +63,9 @@ const AboutSection = () => {
                       </CardContent>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="relative p-0 rounded-[10px] overflow-hidden top-80 max-w-[450px] min-h-[500px] sm:max-w-[725px] sm:min-h-[725px] backdrop-blur-2xl ">
-                    <div className="absolute bg-[url('/hero.jpeg')] bg-cover bg-center h-full w-full rounded-[10px] overflow-hidden"></div>
-                    <DialogHeader className="absolute backdrop-blur-[8px] w-full p-12 h-full">
-                      <DialogTitle className=" z-10 flex justify-start gap-2 items-center">
+                  <DialogContent className="bg-[url('/hero.jpeg')] bg-cover bg-center rounded-[10px]  max-w-[450px] min-h-[500px] sm:max-w-[725px] sm:min-h-[725px]">
+                    <DialogHeader className="w-full p-12 h-full">
+                      <DialogTitle className="flex justify-start gap-2 items-center">
                         <span className="text-[24px] font-medium text-white">
                           {interest.label}
                         </span>

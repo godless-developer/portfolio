@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { div } from "framer-motion/client";
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({
@@ -38,21 +39,22 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "" });
 
-      // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      }, 10000);
+    }, 2000);
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section
+      id="contact"
+      className=" px-8 pt-40 absolute z-10 top-1452 h-[1100px] md:top-1080 flex flex-col justify-between items-center"
+    >
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,11 +63,11 @@ export default function ContactSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
         >
-          <h2 className="font-mono text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Get In Touch
-            <span className="block h-1.5 w-20 bg-pink-500 mx-auto mt-2"></span>
+            <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-400">
             Have a project in mind or just want to say hi? Drop me a message!
           </p>
         </motion.div>
@@ -77,19 +79,23 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Card className="border-2 border-gray-100">
+            <div className=" rounded-lg py-20 backdrop-blur-[14px] border-gray-100">
               <CardHeader className="space-y-1">
                 <CardTitle className="text-2xl font-mono flex items-center justify-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-pink-500" />
+                  <MessageSquare className="h-5 w-5 text-orange-700" />
                   Send a Message
                 </CardTitle>
-                <CardDescription>
-                  I'll get back to you as soon as possible!
-                </CardDescription>
+                {isSubmitted ? (
+                  <div></div>
+                ) : (
+                  <CardDescription className="py-5 text-gray-400">
+                    I'll get back to you as soon as possible!
+                  </CardDescription>
+                )}
               </CardHeader>
               <CardContent>
                 {isSubmitted ? (
-                  <div className="rounded-lg bg-green-50 p-6 text-center">
+                  <div className="rounded-lg bg-green-50 opacity-40 p-6 mt-8 text-center">
                     <h3 className="text-lg font-medium text-green-800 mb-2">
                       Message sent successfully!
                     </h3>
@@ -98,7 +104,7 @@ export default function ContactSection() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-10">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
                       <Input
@@ -108,7 +114,7 @@ export default function ContactSection() {
                         required
                         value={formState.name}
                         onChange={handleChange}
-                        className="border-gray-200 focus:border-pink-300 focus:ring-pink-300"
+                        className="outline-none focus:outline-none focus:ring-0"
                       />
                     </div>
                     <div className="space-y-2">
@@ -175,7 +181,7 @@ export default function ContactSection() {
                   </form>
                 )}
               </CardContent>
-            </Card>
+            </div>
           </motion.div>
         </div>
       </div>

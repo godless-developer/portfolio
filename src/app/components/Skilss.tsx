@@ -73,14 +73,9 @@ export default function SkillsSection() {
       color: "bg-purple-100 text-purple-600",
     },
     {
-      name: "Responsive Design",
+      name: "Responsive",
       icon: <Smartphone className="h-6 w-6" />,
       color: "bg-purple-100 text-purple-600",
-    },
-    {
-      name: "UI/UX",
-      icon: <Sparkles className="h-6 w-6" />,
-      color: "bg-pink-100 text-pink-600",
     },
     {
       name: "UI/UX",
@@ -105,7 +100,10 @@ export default function SkillsSection() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section
+      id="skills"
+      className="pb-20 pt-44 px-8 absolute z-10 top-[1750px] md:top-[1790px]"
+    >
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,11 +112,11 @@ export default function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
         >
-          <h2 className="font-mono text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
             My Toolbox
-            <span className="block h-1.5 w-20 bg-pink-500 mx-auto mt-2"></span>
+            <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-400">
             Here are some of the technologies and tools I work with
           </p>
         </motion.div>
@@ -137,7 +135,7 @@ export default function SkillsSection() {
             >
               {frontendSkills.map((skill, index) => (
                 <motion.div key={index} variants={item}>
-                  <Card className="border-2 border-gray-100 hover:border-pink-300 transition-all hover:-translate-y-1 cursor-pointer">
+                  <div className="border-[0.5px] border-gray-100 py-4 rounded-lg backdrop-blur-[12px] hover:border-pink-300 transition-all hover:-translate-y-1 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex flex-col items-center text-center">
                         <div className={`p-3 rounded-full mb-4 ${skill.color}`}>
@@ -146,7 +144,7 @@ export default function SkillsSection() {
                         <h4 className="font-medium">{skill.name}</h4>
                       </div>
                     </CardContent>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -165,7 +163,7 @@ export default function SkillsSection() {
             >
               {backendSkills.map((skill, index) => (
                 <motion.div key={index} variants={item}>
-                  <Card className="border-2 border-gray-100 hover:border-pink-300 transition-all hover:-translate-y-1 cursor-pointer">
+                  <div className="border-[0.5px] border-gray-100 py-4 rounded-lg backdrop-blur-[12px] hover:border-pink-300 transition-all hover:-translate-y-1 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex flex-col items-center text-center">
                         <div className={`p-3 rounded-full mb-4 ${skill.color}`}>
@@ -174,7 +172,7 @@ export default function SkillsSection() {
                         <h4 className="font-medium">{skill.name}</h4>
                       </div>
                     </CardContent>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -193,16 +191,16 @@ export default function SkillsSection() {
             >
               {otherSkills.map((skill, index) => (
                 <motion.div key={index} variants={item}>
-                  <Card className="border-2 border-gray-100 hover:border-pink-300 transition-all hover:-translate-y-1 cursor-pointer">
-                    <CardContent className="p-6">
+                  <div className="border-[0.5px] border-gray-100 py-4 rounded-lg backdrop-blur-[12px] hover:border-pink-300 transition-all hover:-translate-y-1 cursor-pointer">
+                    <CardContent className="p-8">
                       <div className="flex flex-col items-center text-center">
-                        <div className={`p-3 rounded-full mb-4 ${skill.color}`}>
+                        <div className={`p-3 rounded-full ${skill.color}`}>
                           {skill.icon}
                         </div>
                         <h4 className="font-medium">{skill.name}</h4>
                       </div>
                     </CardContent>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>

@@ -19,15 +19,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div
-      className=" flex flex-col gap-10 w-full h-[400px] justify-center bg-amber-800"
-      // style={{
-      //   backgroundImage:
-      //     'url("https://e0.pxfuel.com/wallpapers/348/871/desktop-wallpaper-honeycomb-red-and-black-honeycomb.jpg")',
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      // }}
-    >
+    <div className=" flex flex-col gap-10 px-8 w-full h-[400px] justify-center absolute z-10 top-68 md:top-80">
       <div className="z-10">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
@@ -36,24 +28,28 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl">
-              <span className="text-pink-500">Hello!</span> I'm a
+              <span className="text-orange-700">Hello!</span>
+              <span className="text-white">I'm a</span>
+
               <span className="relative inline-block">
-                <span className="relative z-10">Fullstack Dev</span>
-                <span className="absolute bottom-2 left-0 z-0 h-3 w-full bg-yellow-300 opacity-50"></span>
+                <span className="relative z-10 text-white">Fullstack Dev</span>
+                <span className="absolute bottom-2 left-0 z-0 h-3 w-full bg-green-300 opacity-50"></span>
               </span>
             </h1>
           </motion.div>
 
-          <motion.p
+          <motion.div
             className="mt-6 text-lg leading-8 text-gray-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I build cool stuff for the web with modern technologies.
-            <br />
-            Let's create something awesome together!
-          </motion.p>
+            <p className="text-gray-400 text-shadow-2xl">
+              I build cool stuff for the web with modern technologies.
+              <br />
+              Let's create something awesome together!
+            </p>
+          </motion.div>
 
           <motion.div
             className="mt-10 flex items-center justify-center gap-x-6"

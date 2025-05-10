@@ -1,14 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Coffee, Gamepad, Music } from "lucide-react";
+import {
+  Code,
+  Coffee,
+  Gamepad,
+  HeartPulse,
+  Music,
+  Sprout,
+  Trophy,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
   const interests = [
     { icon: <Code className="h-6 w-6" />, label: "Coding" },
-    { icon: <Coffee className="h-6 w-6" />, label: "Coffee" },
+    { icon: <HeartPulse className="h-6 w-6" />, label: "Health" },
     { icon: <Gamepad className="h-6 w-6" />, label: "Gaming" },
     { icon: <Music className="h-6 w-6" />, label: "Music" },
   ];
@@ -16,7 +35,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-to-b from-white to-gray-50"
+      className="pb-20 pt-60 px-8 z-10 absolute top-160 md:top-190"
     >
       <div className="container">
         <motion.div
@@ -26,9 +45,9 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
         >
-          <h2 className="font-mono text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
             About Me
-            <span className="block h-1.5 w-20 bg-pink-500 mx-auto mt-2"></span>
+            <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
         </motion.div>
 
@@ -39,19 +58,19 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300">
+            {/* <div className="relative">
+              <div className="aspect-square overflow-hidden ml-20 rounded-3xl h-[500px] w-[500px]">
                 <Image
                   src={
                     "https://img.freepik.com/premium-photo/programmer-working-new-software-while-sitting_995162-2567.jpg"
                   }
                   alt={"Developer portrait"}
-                  width={400}
-                  height={400}
-                  className="h-full w-full object-cover"
+                  width={2000}
+                  height={2000}
+                  className="h-full w-full rounded-3xl object-cover"
                 />
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -61,34 +80,51 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <h3 className="text-2xl font-bold mb-4 font-mono">
-              Hey there! I'm <span className="text-pink-500">Battulga</span>
+              Hey there! I'm <span className="text-orange-700">Battulga</span>
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-white mb-6">
               A passionate fullstack developer who loves creating beautiful and
               functional web applications. With a background in both frontend
               and backend technologies, I enjoy bringing ideas to life through
               clean code and intuitive user experiences.
             </p>
-            <p className="text-gray-600 mb-8">
+            <p className="text-white mb-8">
               When I'm not coding, you can find me exploring new tech, playing
               video games, or enjoying a good cup of coffee. I believe in
               continuous learning and pushing the boundaries of what's possible
               on the web.
             </p>
-
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {interests.map((interest, index) => (
-                <Card
-                  key={index}
-                  className="border-2 border-gray-100 hover:border-pink-300 transition-colors"
-                >
-                  <CardContent className="flex flex-col items-center justify-center p-4">
-                    <div className="mb-2 text-pink-500">{interest.icon}</div>
-                    <span className="text-sm font-medium">
-                      {interest.label}
-                    </span>
-                  </CardContent>
-                </Card>
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <div className="border-[0.5px] cursor-pointer border-gray-100 rounded-lg backdrop-blur-[12px] bg-none p-10 hover:border-pink-300 ">
+                      <CardContent className="flex flex-col items-center justify-center p-4">
+                        <div className="mb-2 text-orange-700">
+                          {interest.icon}
+                        </div>
+                        <span className="text-sm font-medium">
+                          {interest.label}
+                        </span>
+                      </CardContent>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="relative p-0 rounded-[10px] overflow-hidden top-80 max-w-[450px] min-h-[500px] sm:max-w-[725px] sm:min-h-[725px] backdrop-blur-2xl ">
+                    <div className="absolute bg-[url('/hero.jpeg')] bg-cover bg-center h-full w-full rounded-[10px] overflow-hidden"></div>
+                    <DialogHeader className="absolute backdrop-blur-[8px] w-full p-12 h-full">
+                      <DialogTitle className=" z-10 flex justify-start gap-2 items-center">
+                        <span className="text-[24px] font-medium text-white">
+                          {interest.label}
+                        </span>
+                        <div className="text-orange-700 mt-1">
+                          {interest.icon}
+                        </div>
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="grid gap-4 py-4"></div>
+                    <DialogFooter></DialogFooter>
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </motion.div>

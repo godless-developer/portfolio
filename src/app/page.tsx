@@ -1,91 +1,11 @@
 "use client";
-import "@/i18n";
-import { CodeXml, Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
-import HeroSection from "./components/Hero";
-import AboutSection from "./components/About";
-import SkillsSection from "./components/Skilss";
-import ProjectsSection from "./components/Project";
-import ContactMe from "./components/ContactMe";
-import LanguageSwitcher from "./components/LanguageSwitcher";
-import { useTranslation } from "react-i18next";
-import type { AppProps } from "next/app";
-import { appWithTranslation } from "next-i18next";
 
-export default function Home({ Component, pageProps }: AppProps) {
-  const { t } = useTranslation("common");
-  return (
-    <div className="min-h-screen w-full  text-white">
-      <header className="fixed top-0 z-40 w-[100%]  bg-white/10 backdrop-blur-[7px] flex justify-center">
-        <div className="container flex h-16 items-center justify-between w-full px-10">
-          <Link href="/" className="flex items-center gap-2">
-            <CodeXml color="#CA3501" />
-            <span className="font-mono text-xl font-bold">Tuk</span>
-          </Link>
-          <nav className="hidden md:flex gap-14">
-            <Link
-              href="#about"
-              className="text-sm font-medium hover:text-orange-700 transition-colors"
-            >
-              {t("About")}
-            </Link>
-            <Link
-              href="#skills"
-              className="text-sm font-medium hover:text-orange-700 transition-colors"
-            >
-              {t("Skills")}
-            </Link>
-            <Link
-              href="#projects"
-              className="text-sm font-medium hover:text-orange-700 transition-colors"
-            >
-              {t("Projects")}
-            </Link>
-            <Link
-              href="#contact"
-              className="text-sm font-medium hover:text-orange-700 transition-colors"
-            >
-              {t("Contact")}
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="h-5 w-5 text-gray-600 hover:text-orange-700 transition-colors" />
-              <span className="sr-only">GitHub</span>
-            </Link>
-            <Link
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="h-5 w-5 text-gray-600 hover:text-orange-700 transition-colors" />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
+import dynamic from "next/dynamic";
 
-            <LanguageSwitcher {...pageProps} />
-          </div>
-        </div>
-      </header>
-      <main className="relative w-full">
-        <video
-          autoPlay
-          loop
-          muted
-          src="./portfolio2.mp4"
-          className="w-full h-screen object-cover bg-center z-0 fixed"
-        ></video>
-        <div className="absolute z-10 backdrop-blur-[16px] flex flex-col items-center  justify-center w-full h-[6920px] md:h-[5440px]">
-          <HeroSection />
-          <AboutSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <ContactMe />
-        </div>
-      </main>
-    </div>
-  );
+const HomeClient = dynamic(() => import("./components/homeClient"), {
+  ssr: false,
+});
+
+export default function Home() {
+  return <HomeClient />;
 }

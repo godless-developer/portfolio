@@ -8,12 +8,37 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Image from "next/image";
 const AboutSection = () => {
   const interests = [
-    { icon: <Code className="h-6 w-6" />, label: "Coding" },
-    { icon: <HeartPulse className="h-6 w-6" />, label: "Health" },
-    { icon: <Gamepad className="h-6 w-6" />, label: "Gaming" },
-    { icon: <Music className="h-6 w-6" />, label: "Music" },
+    {
+      icon: <Code className="h-6 w-6" />,
+      label: "Coding",
+      img: "/coding.png",
+      description:
+        "I love building beautiful, fast, and accessible web applications using the latest technologies.",
+    },
+    {
+      icon: <HeartPulse className="h-6 w-6" />,
+      label: "Health",
+      img: "/health.png",
+      description:
+        "Staying healthy is important for both body and mind. I enjoy learning about fitness and nutrition.",
+    },
+    {
+      icon: <Gamepad className="h-6 w-6" />,
+      label: "Gaming",
+      img: "/gaming.png",
+      description:
+        "Gaming helps me relax and connect with friends. I love immersive story-driven games.",
+    },
+    {
+      icon: <Music className="h-6 w-6" />,
+      label: "Music",
+      img: "/music.png",
+      description:
+        "Music keeps me inspired while I code. I enjoy exploring different genres and beats.",
+    },
   ];
 
   return (
@@ -63,8 +88,11 @@ const AboutSection = () => {
                       </CardContent>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="bg-[url('/hero.jpeg')] bg-cover bg-center rounded-[10px]  max-w-[450px] min-h-[500px] sm:max-w-[725px] sm:min-h-[725px]">
-                    <DialogHeader className="w-full p-12 h-full">
+                  <DialogContent
+                    style={{ backgroundImage: `url(${interest.img})` }}
+                    className="bg-cover bg-center rounded-[10px]  max-w-[450px] min-h-[500px] sm:max-w-[725px] sm:min-h-[725px]"
+                  >
+                    <DialogHeader className="w-full p-7 h-full">
                       <DialogTitle className="flex justify-start gap-2 items-center">
                         <span className="text-[24px] font-medium text-white">
                           {interest.label}
@@ -74,7 +102,16 @@ const AboutSection = () => {
                         </div>
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="grid gap-4 py-4"></div>
+                    <div className="grid gap-4 py-4">
+                      <div className="px-6 pb-6 flex flex-col items-center justify-center text-center gap-4">
+                        <Image
+                          src={interest.img}
+                          alt={interest.label}
+                          className="w-40 h-40 object-contain rounded-md shadow-md"
+                        />
+                        <p className="text-sm">{interest.description}</p>
+                      </div>
+                    </div>
                     <DialogFooter></DialogFooter>
                   </DialogContent>
                 </Dialog>

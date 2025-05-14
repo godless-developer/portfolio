@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { motion } from "framer-motion";
 import { CardContent } from "@/components/ui/card";
 
@@ -6,7 +6,7 @@ const SkillCard = ({
   skill,
   percentage,
 }: {
-  skill: any;
+  skill: { name: string; icon: JSX.Element; color: string };
   percentage: number;
 }) => {
   const [flipped, setFlipped] = useState(false);
@@ -38,11 +38,11 @@ const SkillCard = ({
         >
           <div className="p-4 pr-2 flex flex-col items-center text-center justify-center w-full h-full backdrop-blur-[2px] rounded-lg">
             <h4 className="text-[15px] font-semibold ">{skill.name}</h4>
-            <p className=" mb-2">{skill.percentage}%</p>
+            <p className=" mb-2">{percentage}%</p>
             <div className="w-3/4 h-2 bg-gray-200 rounded-full overflow-hidden">
               <div
                 className="h-full bg-green-800"
-                style={{ width: `${skill.percentage}%` }}
+                style={{ width: `${percentage}%` }}
               />
             </div>
           </div>

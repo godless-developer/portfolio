@@ -1,7 +1,4 @@
-"use client";
-
 import { motion } from "framer-motion";
-import { CardContent } from "@/components/ui/card";
 import {
   Braces,
   Database,
@@ -13,7 +10,6 @@ import {
   Sparkles,
   SplinePointer,
 } from "lucide-react";
-import { useState } from "react";
 import SkillCard from "./SkillCards";
 
 const SkillsSection = () => {
@@ -107,13 +103,6 @@ const SkillsSection = () => {
       },
     },
   };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
-  const [flipped, setFlipped] = useState(false);
 
   return (
     <section

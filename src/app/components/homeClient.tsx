@@ -1,19 +1,17 @@
 "use client";
-import { CodeXml, Github, Linkedin } from "lucide-react";
+import { CodeXml } from "lucide-react";
 import Link from "next/link";
 import HeroSection from "./Hero";
 import AboutSection from "./About";
 import ProjectsSection from "./Project";
 import ContactMe from "./ContactMe";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useTranslation } from "react-i18next";
 import "../../i18n";
 import Image from "next/image";
 import { MenuBar } from "./Menubar";
 import SkillsSection from "./Skilss";
 
 export default function HomeClient() {
-  const { t } = useTranslation();
   return (
     <div className="min-h-screen w-full  text-white">
       <header className="fixed top-0 z-40 w-[100%]  bg-white/10 backdrop-blur-[7px] flex justify-center">

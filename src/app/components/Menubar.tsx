@@ -2,18 +2,7 @@
 
 import type * as React from "react";
 import { motion } from "framer-motion";
-import {
-  Home,
-  Settings,
-  Bell,
-  User,
-  AlignHorizontalDistributeCenter,
-  User2Icon,
-  SkullIcon,
-  Sparkles,
-  FolderKanban,
-} from "lucide-react";
-import { useTheme } from "next-themes";
+import { User, User2Icon, Sparkles, FolderKanban } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface MenuItem {
@@ -104,8 +93,6 @@ const sharedTransition = {
 export function MenuBar() {
   const { t } = useTranslation();
 
-  const { theme } = useTheme();
-
   return (
     <motion.nav
       className="p-[13px] rounded-2xl relative overflow-hidden"
@@ -120,7 +107,7 @@ export function MenuBar() {
       />
       <ul className="flex items-center gap-12 relative z-10 px-8">
         {menuItems.map((item, index) => (
-          <motion.li key={item.label} className="relative">
+          <motion.li key={index} className="relative">
             <motion.div
               className="block rounded-xl overflow-visible group relative"
               style={{ perspective: "600px" }}

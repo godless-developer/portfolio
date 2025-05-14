@@ -4,17 +4,15 @@ import { CardContent } from "@/components/ui/card";
 
 const SkillCard = ({
   skill,
-  percentage,
 }: {
-  skill: { name: string; icon: JSX.Element; color: string };
-  percentage: number;
+  skill: { name: string; icon: JSX.Element; color: string; percentage: number };
 }) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
     <div className="perspective" onClick={() => setFlipped(!flipped)}>
       <motion.div
-        className="relative w-full h-full "
+        className="relative w-full h-full"
         animate={{ rotateY: flipped ? 180 : 0 }}
         transition={{ duration: 0.6 }}
         style={{ transformStyle: "preserve-3d" }}
@@ -38,11 +36,11 @@ const SkillCard = ({
         >
           <div className="p-4 pr-2 flex flex-col items-center text-center justify-center w-full h-full backdrop-blur-[2px] rounded-lg">
             <h4 className="text-[15px] font-semibold ">{skill.name}</h4>
-            <p className=" mb-2">{percentage}%</p>
+            <p className=" mb-2">{skill.percentage}%</p>
             <div className="w-3/4 h-2 bg-gray-200 rounded-full overflow-hidden">
               <div
                 className="h-full bg-green-800"
-                style={{ width: `${percentage}%` }}
+                style={{ width: `${skill.percentage}%` }}
               />
             </div>
           </div>

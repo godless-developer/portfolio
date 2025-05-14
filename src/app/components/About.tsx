@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
+
 const AboutSection = () => {
   const interests = [
     {
@@ -35,12 +36,96 @@ const AboutSection = () => {
     {
       icon: <Music className="h-6 w-6" />,
       label: "Music",
-      img: "/music.png",
+      img: "/pfbr.png",
+      audio: (
+        <div className="h-[400px] overflow-scroll flex flex-col gap-[10px]">
+          <div className="flex gap-6">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/peekaboo-feat-azchike/1781270319?i=1781270545&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1781270545&amp;theme=dark"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/hair-gangsta/1809561061?i=1809561062&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1809561062&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+          <div className="flex gap-6">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/animals/1422651829?i=1422651844&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1422651844&amp;theme=auto"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/sugar/1422651829?i=1422652341&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1422652341&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+          <div className="flex gap-6">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/good-credit/1802175271?i=1802175545&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1802175545&amp;theme=auto"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/hongor-chamdaa/1052925777?i=1052926364&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1052925777&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+        </div>
+      ),
       description:
         "Music keeps me inspired while I code. I enjoy exploring different genres and beats.",
     },
   ];
-
   return (
     <section
       id="about"
@@ -73,6 +158,10 @@ const AboutSection = () => {
               in continuous learning and pushing the boundaries of what&apos;s
               possible on the web.
             </p>
+
+            {/* Embed the random Apple Music player here */}
+            <div className="mb-8"></div>
+
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {interests.map((interest, index) => (
                 <Dialog key={index}>
@@ -102,15 +191,11 @@ const AboutSection = () => {
                         </div>
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                      <div className="px-6 pb-6 flex flex-col items-center justify-center text-center gap-4">
-                        <Image
-                          src={interest.img}
-                          alt={interest.label}
-                          className="w-40 h-40 object-contain rounded-md shadow-md"
-                        />
-                        <p className="text-sm">{interest.description}</p>
+                    <div>
+                      <div className=" flex flex-col items-center justify-start text-center gap-2">
+                        {interest.audio}
                       </div>
+                      {/* <p className="text-sm">{interest.description}</p> */}
                     </div>
                     <DialogFooter></DialogFooter>
                   </DialogContent>
@@ -123,4 +208,5 @@ const AboutSection = () => {
     </section>
   );
 };
+
 export default AboutSection;

@@ -11,8 +11,9 @@ const HeroSection = () => {
               <span className="text-orange-700">{t("Hello!")}</span>
               <span className="text-white">{t("I&apos;m")}</span>{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 text-white">Fullstack Dev</span>
-                <span className="absolute bottom-2 left-0 z-0 h-3 w-full bg-green-300 opacity-50"></span>
+                <span className="relative z-10 text-background">
+                  Fullstack Dev
+                </span>
               </span>
             </h1>
           </div>

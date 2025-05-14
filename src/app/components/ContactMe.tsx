@@ -49,7 +49,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className=" px-8 pt-40 absolute z-10 top-1452 h-[1100px] md:top-1080 flex flex-col justify-between items-center"
+      className=" px-8 pt-40 absolute z-10 top-1522 h-[1100px] md:top-1080 flex flex-col justify-between items-center"
     >
       <div className="container">
         <motion.div

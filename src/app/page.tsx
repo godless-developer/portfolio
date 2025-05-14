@@ -7,5 +7,9 @@ const HomeClient = dynamic(() => import("./components/homeClient"), {
 });
 
 export default function Home() {
-  return <HomeClient />;
+  return (
+    <div>
+      <HomeClient />;
+    </div>
+  );
 }

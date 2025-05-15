@@ -31,19 +31,30 @@ const ContactMe = () => {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const res = await fetch("https://formspree.io/f/mzzrywav", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formState),
+    });
+
+    setIsSubmitting(false);
+
+    if (res.ok) {
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "" });
 
       setTimeout(() => {
         setIsSubmitted(false);
       }, 10000);
-    }, 2000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (

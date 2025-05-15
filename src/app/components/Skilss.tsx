@@ -11,6 +11,7 @@ import {
   SplinePointer,
 } from "lucide-react";
 import SkillCard from "./SkillCards";
+import { useTranslation } from "react-i18next";
 
 const SkillsSection = () => {
   const frontendSkills = [
@@ -103,6 +104,7 @@ const SkillsSection = () => {
       },
     },
   };
+  const { t } = useTranslation();
 
   return (
     <section
@@ -118,17 +120,15 @@ const SkillsSection = () => {
           className="mx-auto max-w-3xl text-center mb-16"
         >
           <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            My Toolbox
+            <span>{t("MyToolbox")}</span>
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
-            Here are some of the technologies and tools I work with
-          </p>
+          <p className="mt-4 text-lg text-gray-400">{t("myskillshere")}</p>
         </motion.div>
 
         <div className="md:px-[20%]">
           <h3 className="text-xl font-bold mb-10 text-center font-mono">
-            Frontend
+            {t("frontend")}
           </h3>
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 h-[400px] md:h-full"
@@ -138,14 +138,14 @@ const SkillsSection = () => {
             viewport={{ once: true }}
           >
             {frontendSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} percentage={80} />
+              <SkillCard key={index} skill={skill} />
             ))}
           </motion.div>
         </div>
 
         <div className="mt-32 md:mt-56 md:px-[20%]">
           <h3 className="text-xl font-bold mb-10 text-center font-mono">
-            Backend
+            {t("backend")}
           </h3>
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 h-[400px] md:h-full"
@@ -155,14 +155,14 @@ const SkillsSection = () => {
             viewport={{ once: true }}
           >
             {backendSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} percentage={80} />
+              <SkillCard key={index} skill={skill} />
             ))}
           </motion.div>
         </div>
 
         <div className="mt-32 md:mt-56 md:px-[20%] ">
           <h3 className="text-xl font-bold mb-10 text-center font-mono">
-            Other Skills
+            {t("otherskills")}
           </h3>
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 h-[400px] md:h-full"
@@ -172,7 +172,7 @@ const SkillsSection = () => {
             viewport={{ once: true }}
           >
             {otherSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} percentage={80} />
+              <SkillCard key={index} skill={skill} />
             ))}
           </motion.div>
         </div>

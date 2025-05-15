@@ -19,6 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useTranslation } from "react-i18next";
 
 const ProjectsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -97,6 +98,7 @@ const ProjectsSection = () => {
       githubUrl: "#",
     },
   ];
+  const { t } = useTranslation();
 
   return (
     <section
@@ -112,7 +114,7 @@ const ProjectsSection = () => {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Featured Projects
+            {t("recentProjects")}
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
           <p className="mt-4 text-lg text-gray-400">

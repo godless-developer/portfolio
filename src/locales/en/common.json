@@ -6,5 +6,11 @@
   "Hello!": "Hello!",
   "I&apos;m": "I'm",
   "hero1word": "I build cool stuff for the web with modern technologies.",
-  "hero2word": "Let's create something awesome together!"
+  "hero2word": "Let's create something awesome together!",
+  "MyToolbox": "My Toolbox",
+  "myskillshere": "Here are some of the technologies and tools I work with",
+  "frontend": "Frontend",
+  "backend": "Backend",
+  "otherskills": "Other Skills",
+  "recentProjects": "Recent Projects"
 }

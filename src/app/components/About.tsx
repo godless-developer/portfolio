@@ -1,4 +1,4 @@
-import { Code, Gamepad, HeartPulse, Music } from "lucide-react";
+import { Gamepad, HeartPulse, Music, Stars } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import {
   Dialog,
@@ -12,8 +12,8 @@ import {
 const AboutSection = () => {
   const interests = [
     {
-      icon: <Code className="h-6 w-6" />,
-      label: "Coding",
+      icon: <Stars className="h-6 w-6" />,
+      label: "Galaxy",
       img: "/coding.png",
       description:
         "I love building beautiful, fast, and accessible web applications using the latest technologies.",
@@ -37,8 +37,8 @@ const AboutSection = () => {
       label: "Music",
       img: "/pfbr.png",
       audio: (
-        <div className="h-[400px] overflow-scroll flex flex-col gap-[10px]">
-          <div className="flex gap-6">
+        <div className="h-[400px] overflow-y-scroll scrollbar-none flex flex-col gap-[8px]">
+          <div className="md:flex md:gap-6">
             <iframe
               title="Media player"
               src="https://embed.music.apple.com/us/album/peekaboo-feat-azchike/1781270319?i=1781270545&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1781270545&amp;theme=dark"
@@ -65,7 +65,7 @@ const AboutSection = () => {
               }}
             />
           </div>
-          <div className="flex gap-6">
+          <div className="md:flex md:gap-6 ">
             <iframe
               title="Media player"
               src="https://embed.music.apple.com/us/album/animals/1422651829?i=1422651844&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1422651844&amp;theme=auto"
@@ -92,7 +92,7 @@ const AboutSection = () => {
               }}
             />
           </div>
-          <div className="flex gap-6">
+          <div className="md:flex md:gap-6 ">
             <iframe
               title="Media player"
               src="https://embed.music.apple.com/us/album/good-credit/1802175271?i=1802175545&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1802175545&amp;theme=auto"

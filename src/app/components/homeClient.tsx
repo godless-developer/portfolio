@@ -45,6 +45,29 @@ export default function HomeClient() {
           <ContactMe />
         </div>
       </main>
+      <footer className="flex items-center justify-center w-full h-20 bg-white/10 backdrop-blur-[7px] absolute top-1340 z-10">
+        <div className="container flex items-center justify-between w-full px-10">
+          <p className="text-sm text-gray-400">
+            © 2025 - I want beautiful live.
+          </p>
+          <div className="flex items-center gap-8">
+            <Link
+              href="https://github.com/godless-developer"
+              target="_blank"
+              className="text-sm text-gray-400"
+            >
+              Github
+            </Link>
+            <Link
+              href="https://www.facebook.com/battulgabatjargal.batuk"
+              target="_blank"
+              className="text-sm text-gray-400"
+            >
+              Facebook
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -45,9 +45,9 @@ export default function HomeClient() {
           <ContactMe />
         </div>
       </main>
-      <footer className="flex items-center justify-center w-full h-20 bg-white/10 backdrop-blur-[7px] absolute top-1340 z-10">
-        <div className="container flex items-center justify-between w-full px-10">
-          <p className="text-sm text-gray-400">
+      <footer className="flex items-center justify-center w-full h-20 bg-white/10 backdrop-blur-[7px] absolute md:top-1340 top-1785 z-10">
+        <div className="container flex items-center justify-between w-full px-4">
+          <p className="text-sm text-gray-400 ">
             © 2025 - I want beautiful live.
           </p>
           <div className="flex items-center gap-8">

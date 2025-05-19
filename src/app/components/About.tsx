@@ -14,21 +14,29 @@ const AboutSection = () => {
     {
       icon: <Stars className="h-6 w-6" />,
       label: "Galaxy",
-      img: "/coding.png",
+      soon: "as soon as ...",
+      img: "/pfbr.png",
       description:
         "I love building beautiful, fast, and accessible web applications using the latest technologies.",
     },
     {
       icon: <HeartPulse className="h-6 w-6" />,
       label: "Health",
-      img: "/health.png",
+      soon: "as soon as ...",
+      img: "/pfbr.png",
       description:
         "Staying healthy is important for both body and mind. I enjoy learning about fitness and nutrition.",
     },
     {
       icon: <Gamepad className="h-6 w-6" />,
       label: "Gaming",
-      img: "/gaming.png",
+      soon: "as soon as ...",
+      img: "/pfbr.png",
+      mlbb: (
+        <div>
+          <h1>Mobile legends bang bang</h1>
+        </div>
+      ),
       description:
         "Gaming helps me relax and connect with friends. I love immersive story-driven games.",
     },
@@ -37,11 +45,11 @@ const AboutSection = () => {
       label: "Music",
       img: "/pfbr.png",
       audio: (
-        <div className="h-[400px] overflow-y-scroll scrollbar-none flex flex-col gap-[8px]">
+        <div className="h-[600px] overflow-y-scroll scrollbar-none flex flex-col gap-[8px]">
           <div className="md:flex md:gap-6">
             <iframe
               title="Media player"
-              src="https://embed.music.apple.com/us/album/peekaboo-feat-azchike/1781270319?i=1781270545&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1781270545&amp;theme=dark"
+              src="https://embed.music.apple.com/us/album/good-credit/1802175271?i=1802175545&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1802175545&amp;theme=auto"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
               allow="autoplay *; encrypted-media *; clipboard-write"
               style={{
@@ -53,13 +61,39 @@ const AboutSection = () => {
             />
             <iframe
               title="Media player"
-              src="https://embed.music.apple.com/us/album/hair-gangsta/1809561061?i=1809561062&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1809561062&amp;theme=auto"
+              src="https://embed.music.apple.com/us/album/roly-poly/1804698377?i=1804698378&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1804698378&amp;theme=auto"
               id="embedPlayer"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
               allow="autoplay *; encrypted-media *; clipboard-write"
               style={{
                 border: "0px",
                 borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+          <div className="md:flex md:gap-6 ">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/hot-line/1122635375?i=1122636164&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1122636164&amp;theme=auto"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/peekaboo-feat-azchike/1781270319?i=1781270545&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1781270545&amp;theme=dark"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
                 width: "310px",
                 height: "160px",
               }}
@@ -80,7 +114,7 @@ const AboutSection = () => {
             />
             <iframe
               title="Media player"
-              src="https://embed.music.apple.com/us/album/sugar/1422651829?i=1422652341&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1422652341&amp;theme=auto"
+              src="https://embed.music.apple.com/us/album/i-got-love-feat/1604435502?i=1604435517&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1604435517&amp;theme=auto"
               id="embedPlayer"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
               allow="autoplay *; encrypted-media *; clipboard-write"
@@ -95,19 +129,20 @@ const AboutSection = () => {
           <div className="md:flex md:gap-6 ">
             <iframe
               title="Media player"
-              src="https://embed.music.apple.com/us/album/good-credit/1802175271?i=1802175545&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1802175545&amp;theme=auto"
+              src="https://embed.music.apple.com/us/album/%D1%8D%D0%BD%D1%8D-%D0%B1%D0%BE%D0%BB-%D0%B4%D1%83%D1%80%D0%BB%D0%B0%D0%BB-%D0%B1%D0%B8%D1%88/1222984049?i=1222984692&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1222984692&amp;theme=auto"
+              id="embedPlayer"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
               allow="autoplay *; encrypted-media *; clipboard-write"
               style={{
                 border: "0px",
-                borderRadius: "8px",
+                borderRadius: "12px",
                 width: "310px",
                 height: "160px",
               }}
             />
             <iframe
               title="Media player"
-              src="https://embed.music.apple.com/us/album/hongor-chamdaa/1052925777?i=1052926364&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1052925777&amp;theme=auto"
+              src="https://embed.music.apple.com/us/album/%E5%85%AB%E6%96%B9%E6%9D%A5%E8%B4%A2/1763742878?i=1763742879&&amp;itscg=30200&&amp;itsct=music_box_link&&amp;ls=1&app=music&mttnsubad=1763742879&amp;theme=auto"
               id="embedPlayer"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
               allow="autoplay *; encrypted-media *; clipboard-write"
@@ -194,7 +229,9 @@ const AboutSection = () => {
                       <div className=" flex flex-col items-center justify-start text-center gap-2">
                         {interest.audio}
                       </div>
-                      {/* <p className="text-sm">{interest.description}</p> */}
+                      <p className="text-xl py-4 text-white text-center text-shadow-lg font-bold bg-accent/10 backdrop-blur-[7px] rounded-lg p-2 mt-4">
+                        {interest.soon}
+                      </p>
                     </div>
                     <DialogFooter></DialogFooter>
                   </DialogContent>

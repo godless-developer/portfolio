@@ -30,9 +30,9 @@ const ProjectsSection = () => {
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
       image: "/placeholder.svg?height=400&width=600",
-      tags: ["React Native", "OpenWeather API", "Geolocation"],
-      demoUrl: "#",
-      githubUrl: "#",
+      tags: ["Google Cloud Translation API", "Youtube transcript", "Next.js"],
+      demoUrl: "https://sorry-not-available/",
+      githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
     {
       title: "Food Delivery",
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
       description:
         "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
       image: "/projectWeather.png",
-      tags: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
+      tags: ["React ", "OpenWeather API", "Geolocation"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/weather-app",
     },
@@ -185,14 +185,11 @@ const ProjectsSection = () => {
                               </div>
                             </div>
                             <CardHeader>
-                              <CardTitle className="font-mono text-xl">
+                              <CardTitle className="font-mono text-xl mt-2">
                                 {project.title}
                               </CardTitle>
                               <CardDescription className="h-[130px] relative overflow-scroll scroll-bar-none my-4 ">
                                 {project.description}
-                                <div className="sticky bottom-0 left-[44%] flex items-center justify-center z-0">
-                                  <ChevronDown />
-                                </div>
                               </CardDescription>
                             </CardHeader>
                             <CardFooter>
@@ -201,7 +198,7 @@ const ProjectsSection = () => {
                                   <Badge
                                     key={tagIndex}
                                     variant="secondary"
-                                    className="bg-gray-100 hover:bg-gray-200 text-gray-800"
+                                    className="bg-gray-100  hover:bg-gray-200 text-gray-800"
                                   >
                                     {tag}
                                   </Badge>

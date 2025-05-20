@@ -99,16 +99,18 @@ const ContactMe = () => {
                     I&apos;ll get back to you as soon as possible!
                   </CardDescription>
                 )}
+
               </CardHeader>
               <CardContent>
                 {isSubmitted ? (
-                  <div className="rounded-lg bg-green-50 opacity-40 p-6 mt-8 text-center">
-                    <h3 className="text-lg font-medium text-green-800 mb-2">
+                  <div className="rounded-lg bg-none backdrop-blur-[20px] py-30 mt-8 text-center shadow-xl/60 border-[2px] border-green-800 flex flex-col gap-4 text-shadow-lg/80">
+                    <h3 className="text-lg font-medium mb-2">
                       Message sent successfully!
                     </h3>
-                    <p className="text-green-700">
+                    <p >
                       Thanks for reaching out. I&apos;ll get back to you soon.
                     </p>
+                    <p>🫶</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-10">

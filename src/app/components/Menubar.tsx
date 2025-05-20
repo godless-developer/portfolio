@@ -126,7 +126,7 @@ export function MenuBar() {
               />
               <motion.a
                 href={item.href}
-                className="flex items-center gap-2 text-nowrap px-4 py-2 relative z-10 bg-transparent text-white group-hover:text-green-700 transition-colors rounded-xl"
+                className="flex items-center gap-2 text-nowrap px-4 py-2 relative z-10 bg-transparent text-white group-hover:text-orange-800 hover:text-shadow-lg/50 hover:text-shadow-white transition-colors rounded-xl"
                 variants={itemVariants}
                 transition={sharedTransition}
                 style={{
@@ -138,7 +138,7 @@ export function MenuBar() {
               </motion.a>
               <motion.a
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-green-700 group-hover:text-green-700 transition-colors rounded-xl"
+                className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-orange-800 group-hover:text-orange-800 hover:text-shadow-lg/50 hover:text-shadow-white transition-colors rounded-xl"
                 variants={backVariants}
                 transition={sharedTransition}
                 style={{

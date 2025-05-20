@@ -31,13 +31,13 @@ export default function HomeClient() {
       </header>
       <main className="relative w-full">
         <Image
-          src={"/pfbr.png"}
+          src={"/Tuk.png"}
           width={20000}
           height={20000}
           alt="bg"
           className="w-full h-screen object-cover bg-center z-0 fixed"
         ></Image>
-        <div className="absolute z-10 backdrop-blur-[20px] flex flex-col items-center  justify-center w-full h-[7220px] md:h-[5440px]">
+        <div className="absolute z-10 backdrop-blur-[10px] flex flex-col items-center  justify-center w-full h-[7220px] md:h-[5440px]">
           <HeroSection />
           <AboutSection />
           <SkillsSection />
@@ -54,14 +54,14 @@ export default function HomeClient() {
             <Link
               href="https://github.com/godless-developer"
               target="_blank"
-              className="text-sm text-gray-400"
+              className="text-sm text-gray-400 hover:text-gray-600"
             >
               Github
             </Link>
             <Link
               href="https://www.facebook.com/battulgabatjargal.batuk"
               target="_blank"
-              className="text-sm text-gray-400"
+              className="text-sm text-gray-400 hover:text-blue-600"
             >
               Facebook
             </Link>

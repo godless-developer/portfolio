@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Image from "next/image";
 
 const AboutSection = () => {
   const interests = [
@@ -34,7 +35,44 @@ const AboutSection = () => {
       img: "/pfbr.png",
       mlbb: (
         <div>
-          <h1>Mobile legends bang bang</h1>
+          <div className="flex justify-around gap-2">
+              <Dialog>
+                <DialogTrigger asChild>
+                   <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
+                     <Image 
+                       src="/proml.jpeg"
+                       alt="MLBB"
+                       width={2000}
+                       height={2000}
+                       className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
+                     />
+                    </div>
+                </DialogTrigger>
+                <DialogTitle></DialogTitle>
+                <DialogHeader></DialogHeader>
+               <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
+                 <div className="w-[100%] h-[100%]" style={{ backgroundImage: "url(/proml.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
+               </DialogContent>
+             </Dialog>
+             <Dialog>
+                <DialogTrigger asChild>
+                   <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
+                     <Image 
+                       src="/skinsml.jpeg"
+                       alt="MLBB"
+                       width={2000}
+                       height={2000}
+                       className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
+                     />
+                    </div>
+                </DialogTrigger>
+                <DialogTitle></DialogTitle>
+                <DialogHeader></DialogHeader>
+               <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
+                 <div className="w-[100%] h-[100%]" style={{ backgroundImage: "url(/skinsml.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
+               </DialogContent>
+             </Dialog>
+          </div>
         </div>
       ),
       description:
@@ -45,7 +83,7 @@ const AboutSection = () => {
       label: "Music",
       img: "/pfbr.png",
       audio: (
-        <div className="h-[600px] overflow-y-scroll scrollbar-none flex flex-col gap-[8px]">
+        <div className="h-[320px] md:h-[600px] overflow-y-scroll scrollbar-none flex flex-col gap-[8px]">
           <div className="md:flex md:gap-6">
             <iframe
               title="Media player"
@@ -200,7 +238,7 @@ const AboutSection = () => {
               {interests.map((interest, index) => (
                 <Dialog key={index}>
                   <DialogTrigger asChild>
-                    <div className="border-[0.5px] cursor-pointer border-gray-100 rounded-lg backdrop-blur-[12px] bg-none p-10 hover:border-pink-300 ">
+                    <div className="border-[1px] cursor-pointer border-gray-100 rounded-lg backdrop-blur-[12px] bg-none p-10 ease-in-out duration-300 hover:border-orange-700 hover:scale-105 hover:rotate-3">
                       <CardContent className="flex flex-col items-center justify-center p-4">
                         <div className="mb-2 text-orange-700">
                           {interest.icon}
@@ -212,8 +250,8 @@ const AboutSection = () => {
                     </div>
                   </DialogTrigger>
                   <DialogContent
-                    style={{ backgroundImage: `url(${interest.img})` }}
-                    className="bg-cover bg-center rounded-[10px]  max-w-[450px] min-h-[500px] sm:max-w-[725px] sm:min-h-[725px]"
+                    // style={{ backgroundImage: `url(${interest.img})` }}
+                    className="bg-transparent backdrop-blur-[10px] rounded-[10px]  max-w-[450px] min-h-[400px] sm:max-w-[725px] sm:min-h-[725px]"
                   >
                     <DialogHeader className="w-full p-7 h-full">
                       <DialogTitle className="flex justify-start gap-2 items-center">
@@ -229,9 +267,7 @@ const AboutSection = () => {
                       <div className=" flex flex-col items-center justify-start text-center gap-2">
                         {interest.audio}
                       </div>
-                      <p className="text-xl py-4 text-white text-center text-shadow-lg font-bold bg-accent/10 backdrop-blur-[7px] rounded-lg p-2 mt-4">
-                        {interest.soon}
-                      </p>
+                      {interest.mlbb}
                     </div>
                     <DialogFooter></DialogFooter>
                   </DialogContent>

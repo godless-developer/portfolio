@@ -31,8 +31,8 @@ const SkillCard = ({
 
         {/* Back side */}
         <div
-          style={{ backgroundImage: `url(/pfbr.png)` }}
-          className="bg-cover backdrop-blur-[12px] bg-center absolute w-full h-[185px] md:h-[150px] md:w-full backface-hidden overflow-hidden rotate-y-180 border hover:border-green-700 duration-300 hover:scale-105 transition-all border-gray-100 rounded-lg bg-white text-white   cursor-pointer"
+          // style={{ backgroundImage: `url(/pfbr.png)` }}
+          className="bg-none backdrop-blur-[12px]  absolute w-full h-[185px] md:h-[150px] md:w-full backface-hidden overflow-hidden rotate-y-180 border hover:border-green-700 duration-300 hover:scale-105 transition-all border-gray-100 rounded-lg  text-white   cursor-pointer"
         >
           <div className="p-4 pr-2 flex flex-col items-center text-center justify-center w-full h-full backdrop-blur-[2px] rounded-lg">
             <h4 className="text-[15px] font-semibold ">{skill.name}</h4>

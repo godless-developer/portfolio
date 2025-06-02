@@ -106,19 +106,19 @@ const ContactMe = () => {
               <CardContent>
                 {isSubmitted ? (
                   <>
-                    <ConfettiExplosion
-                      force={0.6}
-                      duration={8000}
-                      particleCount={150}
-                      width={1600}
-                      height={800}
-                    />
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, type: "spring" }}
                       className="rounded-lg bg-none backdrop-blur-[20px] py-10 px-10 mt-8 text-center shadow-xl/60 border-[2px] border-white flex flex-col gap-4 items-center text-shadow-lg/80 relative"
                     >
+                      <ConfettiExplosion
+                        force={0.6}
+                        duration={8000}
+                        particleCount={150}
+                        width={1600}
+                        height={800}
+                      />
                       <div className="w-8 h-8 flex justify-center items-center bg-green-900 rounded-full">
                         <Check color="white" />
                       </div>

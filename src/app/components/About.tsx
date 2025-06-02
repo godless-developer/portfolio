@@ -1,4 +1,11 @@
-import { Gamepad, HeartPulse, Music, Stars } from "lucide-react";
+import {
+  ArrowBigDown,
+  ChevronDown,
+  Gamepad,
+  HeartPulse,
+  Music,
+  Stars,
+} from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import {
   Dialog,
@@ -9,8 +16,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   const interests = [
     {
       icon: <Stars className="h-6 w-6" />,
@@ -35,6 +45,38 @@ const AboutSection = () => {
       img: "/pfbr.png",
       mlbb: (
         <div>
+          <div className="flex gap-4 mb-3">
+            <Image
+              src="/mlbbLogo.png"
+              alt="mlbbLogo"
+              width={2000}
+              height={2000}
+              className="w-[200px] h-[100px] object-fill"
+            />
+            <div className="bg-white rounded-2xl">
+              <Image
+                src="/csgoLogo.png"
+                alt="mlbbLogo"
+                width={2000}
+                height={2000}
+                className="w-[200px] h-[90px] object-fill text-white"
+              />
+            </div>
+            <Image
+              src="/tetris.png"
+              alt="mlbbLogo"
+              width={2000}
+              height={2000}
+              className="w-[200px] h-[100px] object-fill text-white"
+            />
+            <Image
+              src="/pubg.png"
+              alt="mlbbLogo"
+              width={2000}
+              height={2000}
+              className="w-[200px] h-[100px] object-fill text-white"
+            />
+          </div>
           <div className="flex justify-around gap-2">
             <Dialog>
               <DialogTrigger asChild>
@@ -220,34 +262,36 @@ const AboutSection = () => {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center mb-16">
           <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            About Me
+            {t("About Me")}
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div></div>
+          <div>
+            <div className="flex gap-4">
+              <p>Click</p>
+              <ArrowBigDown />
+            </div>
+
+            <Link
+              href={
+                "https://res.cloudinary.com/dsvivujtj/image/upload/v1748874249/fckyou_bouwdk.avif"
+              }
+              target="_blank"
+            >
+              <p className="hover:text-red-500 hover:scale-105 hover:translate-3d duration-300 ease-in-out">
+                хөөш алишү
+              </p>
+            </Link>
+          </div>
           <div>
             <h3 className="text-2xl font-bold mb-4 font-mono">
-              Hey there! I&apos;m{" "}
-              <span className="text-orange-700">Battulga</span>
+              {t("Im")} <span className="text-orange-700">{t("Battulga")}</span>{" "}
+              {t("gdg")}
             </h3>
-            <p className="text-white mb-6">
-              A passionate fullstack developer who loves creating beautiful and
-              functional web applications. With a background in both frontend
-              and backend technologies, I enjoy bringing ideas to life through
-              clean code and intuitive user experiences.
-            </p>
-            <p className="text-white mb-8">
-              When I&apos;m not coding, you can find me exploring new tech,
-              playing video games, or enjoying a good cup of coffee. I believe
-              in continuous learning and pushing the boundaries of what&apos;s
-              possible on the web.
-            </p>
-
-            {/* Embed the random Apple Music player here */}
-            <div className="mb-8"></div>
-
+            <p className="text-white mb-6">{t(`me1`)}</p>
+            <p className="text-white mb-8">{t(`me2`)}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {interests.map((interest, index) => (
                 <Dialog key={index}>

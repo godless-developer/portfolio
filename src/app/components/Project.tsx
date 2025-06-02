@@ -31,7 +31,7 @@ const ProjectsSection = () => {
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
       image: "/projectCoffee.png?height=400&width=600",
-      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      tags: ["React", "GraphQL", "Tailwind CSS", "i18"],
       demoUrl: "https://buymecoffee-gilt.vercel.app",
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
@@ -48,9 +48,9 @@ const ProjectsSection = () => {
     {
       title: t("Food Delivery"),
       description:
-        "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
-      image: "/projectFoodDelivery.png",
-      tags: ["React ", "OpenWeather API", "Geolocation"],
+        "A full-featured online store with cart, checkout, and payment integration.",
+      image: "/projectFood.png",
+      tags: ["React", "Node.js", "MongoDB", "Express"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/weather-app",
     },
@@ -59,7 +59,7 @@ const ProjectsSection = () => {
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
       image: "/projectMovie.png",
-      tags: ["React", "D3.js", "Node.js", "Express"],
+      tags: ["React", "Shadcn", "OpenMovie API"],
       demoUrl: "https://movie-tuka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/movie-z",
     },
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
       image: "/projectTodo.png?height=400&width=600",
-      tags: ["React Native", "OpenWeather API", "Geolocation"],
+      tags: ["Javascript", "Tailwind CSS"],
       demoUrl: "https://todo-app-tukkaa.vercel.app/",
       githubUrl: "https://github.com/godless-developer/Todo-App",
     },
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
       description:
         "Collaborative task manager with real-time updates and team features.",
       image: "/projectPinecone.png?height=400&width=600",
-      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      tags: ["React", "Cypress", "Tailwind CSS", "Monorepo"],
       demoUrl: "#",
       class: "cursor-not-allowed",
       githubUrl: "https://github.com/pinecone-studio/pinecone-intern-monorepo",
@@ -85,9 +85,9 @@ const ProjectsSection = () => {
     {
       title: "Weather App",
       description:
-        "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
+        "A full-featured online store with cart, checkout, and payment integration.",
       image: "/projectWeather.png",
-      tags: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
+      tags: ["React", "OpenWeather API", "Geolocation"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "#",
     },
@@ -113,15 +113,12 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-3xl text-center"
+          className="mx-auto mb-12 max-w-3xl text-center"
         >
           <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
             {t("recentProjects")}
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
-            Check out some of my recent work
-          </p>
         </motion.div>
         <Carousel className="bg-none h-[1000px]">
           <CarouselContent>
@@ -292,9 +289,6 @@ const ProjectsSection = () => {
                               </CardTitle>
                               <CardDescription className="h-[130px] relative overflow-scroll scroll-bar-none my-4 ">
                                 {project.description}
-                                <div className="sticky bottom-0 left-[44%] flex items-center justify-center z-0">
-                                  <ChevronDown />
-                                </div>
                               </CardDescription>
                             </CardHeader>
                             <CardFooter>

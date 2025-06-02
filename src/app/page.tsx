@@ -9,7 +9,7 @@ const HomeClient = dynamic(() => import("./components/homeClient"), {
 
 export default function Home() {
   return (
-    <div>
+    <div className="cursor-default">
       <Cursor />
       <HomeClient />;
     </div>

@@ -2,7 +2,7 @@
 import type React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, Send } from "lucide-react";
+import { Check, MessageSquare, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   CardContent,
@@ -13,8 +13,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslation } from "react-i18next";
+import { ConfettiExplosion } from "react-confetti-explosion";
 
 const ContactMe = () => {
+  const { t } = useTranslation();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -22,7 +25,7 @@ const ContactMe = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(true);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -90,7 +93,7 @@ const ContactMe = () => {
               <CardHeader className="space-y-1">
                 <CardTitle className="text-2xl font-mono flex items-center justify-center gap-2">
                   <MessageSquare className="h-5 w-5 text-orange-700" />
-                  Send a Message
+                  {t("Send a Message")}
                 </CardTitle>
                 {isSubmitted ? (
                   <div></div>
@@ -99,27 +102,45 @@ const ContactMe = () => {
                     I&apos;ll get back to you as soon as possible!
                   </CardDescription>
                 )}
-
               </CardHeader>
               <CardContent>
                 {isSubmitted ? (
-                  <div className="rounded-lg bg-none backdrop-blur-[20px] py-30 mt-8 text-center shadow-xl/60 border-[2px] border-green-800 flex flex-col gap-4 text-shadow-lg/80">
-                    <h3 className="text-lg font-medium mb-2">
-                      Message sent successfully!
-                    </h3>
-                    <p >
-                      Thanks for reaching out. I&apos;ll get back to you soon.
-                    </p>
-                    <p>🫶</p>
-                  </div>
+                  <>
+                    <ConfettiExplosion
+                      force={0.6}
+                      duration={8000}
+                      particleCount={150}
+                      width={1600}
+                      height={800}
+                    />
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, type: "spring" }}
+                      className="rounded-lg bg-none backdrop-blur-[20px] py-10 px-10 mt-8 text-center shadow-xl/60 border-[2px] border-white flex flex-col gap-4 items-center text-shadow-lg/80 relative"
+                    >
+                      <div className="w-8 h-8 flex justify-center items-center bg-green-900 rounded-full">
+                        <Check color="white" />
+                      </div>
+                      <h3 className="text-lg font-medium mb-2 flex items-center gap-2 justify-center">
+                        {t("Message sent successfully!")}
+                      </h3>
+                      <p className="text-wrap">
+                        {t(
+                          "Thanks for reaching out. I'll get back to you soon."
+                        )}
+                      </p>
+                      <p>🫶</p>
+                    </motion.div>
+                  </>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-10">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">{t("Name")}</Label>
                       <Input
                         id="name"
                         name="name"
-                        placeholder="Your name"
+                        placeholder={t("Your name")}
                         required
                         value={formState.name}
                         onChange={handleChange}
@@ -127,12 +148,12 @@ const ContactMe = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t("Email")}</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="your.email@example.com"
+                        placeholder={t("Your email")}
                         required
                         value={formState.email}
                         onChange={handleChange}
@@ -140,7 +161,7 @@ const ContactMe = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
+                      <Label htmlFor="message">{t("Message")}</Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -154,7 +175,7 @@ const ContactMe = () => {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full group"
+                      className="w-full group cursor-pointer"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -178,12 +199,12 @@ const ContactMe = () => {
                               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                             />
                           </svg>
-                          Sending...
+                          {t("Sending...")}
                         </span>
                       ) : (
                         <span className="flex items-center justify-center gap-2">
                           <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                          Send Message
+                          {t("Send Message")}
                         </span>
                       )}
                     </Button>

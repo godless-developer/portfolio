@@ -36,42 +36,56 @@ const AboutSection = () => {
       mlbb: (
         <div>
           <div className="flex justify-around gap-2">
-              <Dialog>
-                <DialogTrigger asChild>
-                   <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
-                     <Image 
-                       src="/proml.jpeg"
-                       alt="MLBB"
-                       width={2000}
-                       height={2000}
-                       className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
-                     />
-                    </div>
-                </DialogTrigger>
-                <DialogTitle></DialogTitle>
-                <DialogHeader></DialogHeader>
-               <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
-                 <div className="w-[100%] h-[100%]" style={{ backgroundImage: "url(/proml.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-               </DialogContent>
-             </Dialog>
-             <Dialog>
-                <DialogTrigger asChild>
-                   <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
-                     <Image 
-                       src="/skinsml.jpeg"
-                       alt="MLBB"
-                       width={2000}
-                       height={2000}
-                       className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
-                     />
-                    </div>
-                </DialogTrigger>
-                <DialogTitle></DialogTitle>
-                <DialogHeader></DialogHeader>
-               <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
-                 <div className="w-[100%] h-[100%]" style={{ backgroundImage: "url(/skinsml.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-               </DialogContent>
-             </Dialog>
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
+                  <Image
+                    src="/proml.jpeg"
+                    alt="MLBB"
+                    width={2000}
+                    height={2000}
+                    className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogTitle></DialogTitle>
+              <DialogHeader></DialogHeader>
+              <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
+                <div
+                  className="w-[100%] h-[100%]"
+                  style={{
+                    backgroundImage: "url(/proml.jpeg)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </DialogContent>
+            </Dialog>
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
+                  <Image
+                    src="/skinsml.jpeg"
+                    alt="MLBB"
+                    width={2000}
+                    height={2000}
+                    className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogTitle></DialogTitle>
+              <DialogHeader></DialogHeader>
+              <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
+                <div
+                  className="w-[100%] h-[100%]"
+                  style={{
+                    backgroundImage: "url(/skinsml.jpeg)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       ),
@@ -249,10 +263,7 @@ const AboutSection = () => {
                       </CardContent>
                     </div>
                   </DialogTrigger>
-                  <DialogContent
-                    // style={{ backgroundImage: `url(${interest.img})` }}
-                    className="bg-transparent backdrop-blur-[10px] rounded-[10px]  max-w-[450px] min-h-[400px] sm:max-w-[725px] sm:min-h-[725px]"
-                  >
+                  <DialogContent className="bg-transparent backdrop-blur-[10px] rounded-[10px]  max-w-[450px] min-h-[400px] sm:max-w-[725px] sm:min-h-[725px]">
                     <DialogHeader className="w-full p-7 h-full">
                       <DialogTitle className="flex justify-start gap-2 items-center">
                         <span className="text-[24px] font-medium text-white">

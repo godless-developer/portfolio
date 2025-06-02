@@ -12,5 +12,19 @@
   "frontend": "Frontend",
   "backend": "Backend",
   "otherskills": "Other Skills",
-  "recentProjects": "Recent Projects"
+  "recentProjects": "Recent Projects",
+  "movieApp": "Movie App",
+  "Food Delivery": "Food Delivery",
+  "viducate": "viducate",
+  "Buy Me Coffee": "Buy Me Coffee",
+  "Your name": "Your name",
+  "Your email": "Your email",
+  "Name": "Name",
+  "Email": "Email",
+  "Message": "Message",
+  "Send Message": "Send Message",
+  "Send a Message": "Send a Message",
+  "Sending...": "Sending...",
+  "Message sent successfully!": "Message sent successfully!",
+  "Thanks for reaching out. I'll get back to you soon.": "Thanks for reaching out. I'll get back to you soon."
 }

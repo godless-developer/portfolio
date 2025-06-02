@@ -40,8 +40,6 @@ export default function Cursor() {
           <circle cx="50" cy="50" r="45" fill="#AE2D00" />
         </svg>
       </div>
-
-      {/* Your page content here */}
     </>
   );
 }

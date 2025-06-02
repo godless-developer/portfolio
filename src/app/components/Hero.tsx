@@ -12,7 +12,7 @@ const HeroSection = () => {
               <span className="text-white">{t("I&apos;m")}</span>{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 text-background">
-                  Fullstack Dev sainuuuu vercel
+                  Fullstack Dev
                 </span>
               </span>
             </h1>

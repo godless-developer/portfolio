@@ -22,11 +22,12 @@ import {
 import { useTranslation } from "react-i18next";
 
 const ProjectsSection = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects = [
     {
-      title: "Buy Me Coffee",
+      title: t("Buy Me Coffee"),
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
       image: "/projectCoffee.png?height=400&width=600",
@@ -35,7 +36,7 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
     {
-      title: "Viducate",
+      title: t("viducate"),
       description:
         "Collaborative task manager with real-time updates and team features.",
       image: "/projectViducate.png?height=400&width=600",
@@ -45,7 +46,7 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
     {
-      title: "Food Delivery",
+      title: t("Food Delivery"),
       description:
         "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
       image: "/projectFoodDelivery.png",
@@ -54,7 +55,7 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/godless-developer/weather-app",
     },
     {
-      title: "Movie App",
+      title: t("movieApp"),
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
       image: "/projectMovie.png",
@@ -91,7 +92,7 @@ const ProjectsSection = () => {
       githubUrl: "#",
     },
     {
-      title: "Movie App1",
+      title: "Neg ym hiine dee",
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
       image: "/placeholder.svg?height=400&width=600",
@@ -100,7 +101,6 @@ const ProjectsSection = () => {
       githubUrl: "#",
     },
   ];
-  const { t } = useTranslation();
 
   return (
     <section

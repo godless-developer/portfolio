@@ -101,7 +101,7 @@ export function MenuBar() {
     >
       <motion.div
         className={`absolute -inset-2 bg-gradient-radial from-transparent 
-            via-blue-400/30 via-30% via-purple-400/30 via-60% via-red-400/30 via-90%
+            via-purple-400/30 via-60%
          to-transparent rounded-3xl z-0 pointer-events-none`}
         variants={navGlowVariants}
       />

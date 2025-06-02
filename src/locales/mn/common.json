@@ -12,5 +12,19 @@
   "frontend": "Пронтэнд",
   "backend": "Байкэнд",
   "otherskills": "Бусад чадварууд",
-  "recentProjects": "Саяхны төслүүд"
+  "recentProjects": "Саяхны төслүүд",
+  "movieApp": "Кино Апп",
+  "Food Delivery": "Хоол Хүргэлт",
+  "viducate": "Видукейт",
+  "Buy Me Coffee": "Хандивийн вэбсайт",
+  "Your name": "Таны нэр",
+  "Your email": "Таны имэйл",
+  "Name": "Нэр",
+  "Email": "Имэйл",
+  "Message": "Мессеж",
+  "Send Message": "Мессеж Илгээх",
+  "Send a Message": "Мессеж Илгээх",
+  "Sending...": "Илгээж байна...",
+  "Message sent successfully!": "Мессеж амжилттай илгээгдлээ!",
+  "Thanks for reaching out. I'll get back to you soon.": "Мессеж илгээсэнд баярлалаа. Би тантай удахгүй эргэж холбогдоно."
 }

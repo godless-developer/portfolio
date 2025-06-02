@@ -25,7 +25,7 @@ const ContactMe = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -106,13 +106,13 @@ const ContactMe = () => {
               <CardContent>
                 {isSubmitted ? (
                   <>
-                    <ConfettiExplosion
+                    {/* <ConfettiExplosion
                       force={0.6}
                       duration={8000}
                       particleCount={150}
                       width={1600}
                       height={800}
-                    />
+                    /> */}
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}

@@ -26,28 +26,29 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "Viducate",
+      title: "Buy Me Coffee",
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/projectCoffee.png?height=400&width=600",
+      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      demoUrl: "https://buymecoffee-gilt.vercel.app",
+      githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
+    },
+    {
+      title: "Viducate",
+      description:
+        "Collaborative task manager with real-time updates and team features.",
+      image: "/projectViducate.png?height=400&width=600",
       tags: ["Google Cloud Translation API", "Youtube transcript", "Next.js"],
       demoUrl: "https://sorry-not-available/",
+      class: "cursor-not-allowed",
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
     {
       title: "Food Delivery",
       description:
-        "Collaborative task manager with real-time updates and team features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Weather App",
-      description:
         "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
-      image: "/projectWeather.png",
+      image: "/projectFoodDelivery.png",
       tags: ["React ", "OpenWeather API", "Geolocation"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/weather-app",
@@ -62,25 +63,26 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/godless-developer/movie-z",
     },
     {
-      title: "Viducate1",
+      title: "Todo-list",
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/projectTodo.png?height=400&width=600",
       tags: ["React Native", "OpenWeather API", "Geolocation"],
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://todo-app-tukkaa.vercel.app/",
+      githubUrl: "https://github.com/godless-developer/Todo-App",
     },
     {
-      title: "Food Delivery1",
+      title: "Pinecone-Monorepo",
       description:
         "Collaborative task manager with real-time updates and team features.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/projectPinecone.png?height=400&width=600",
       tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
       demoUrl: "#",
-      githubUrl: "#",
+      class: "cursor-not-allowed",
+      githubUrl: "https://github.com/pinecone-studio/pinecone-intern-monorepo",
     },
     {
-      title: "Weather App1",
+      title: "Weather App",
       description:
         "A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.A full-featured online store with cart, checkout, and payment integration.",
       image: "/projectWeather.png",
@@ -154,7 +156,12 @@ const ProjectsSection = () => {
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100 flex items-end p-6">
                                 <div className="flex gap-4">
-                                  <Button size="sm" variant="default" asChild>
+                                  <Button
+                                    size="sm"
+                                    className={`${project.class}`}
+                                    variant="default"
+                                    asChild
+                                  >
                                     <Link
                                       href={project.demoUrl}
                                       target="_blank"
@@ -244,7 +251,12 @@ const ProjectsSection = () => {
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100 flex items-end p-6">
                                 <div className="flex gap-4">
-                                  <Button size="sm" variant="default" asChild>
+                                  <Button
+                                    size="sm"
+                                    className={`${project.class}`}
+                                    variant="default"
+                                    asChild
+                                  >
                                     <Link
                                       href={project.demoUrl}
                                       target="_blank"

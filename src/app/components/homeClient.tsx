@@ -5,11 +5,11 @@ import HeroSection from "./Hero";
 import AboutSection from "./About";
 import ProjectsSection from "./Project";
 import ContactMe from "./ContactMe";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "./detailbox/LanguageSwitcher";
 import "../../i18n";
 import Image from "next/image";
-import { MenuBar } from "./Menubar";
-import SkillsSection from "./Skilss";
+import { MenuBar } from "./detailbox/Menubar";
+import SkillsSection from "./skills/Skilss";
 
 export default function HomeClient() {
   return (
@@ -48,7 +48,7 @@ export default function HomeClient() {
       <footer className="flex items-center justify-center w-full h-20 bg-white/10 backdrop-blur-[7px] absolute md:top-1340 top-1785 z-10">
         <div className="container flex items-center justify-between w-full px-4">
           <p className="text-sm text-gray-400 ">
-            © 2025 - I want beautiful live.
+            © 2025 - Built with heart , powered by soul
           </p>
           <div className="flex items-center gap-8">
             <Link

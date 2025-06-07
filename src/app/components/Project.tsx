@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       image: "/projectFood.png",
       tags: ["React", "Node.js", "MongoDB", "Express"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
-      githubUrl: "https://github.com/godless-developer/weather-app",
+      githubUrl: "https://github.com/godless-developer/food-delivery-front",
     },
     {
       title: t("movieApp"),

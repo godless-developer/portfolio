@@ -268,23 +268,7 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="flex gap-4">
-              <p>Click</p>
-              <ArrowBigDown />
-            </div>
-
-            <Link
-              href={
-                "https://res.cloudinary.com/dsvivujtj/image/upload/v1748874249/fckyou_bouwdk.avif"
-              }
-              target="_blank"
-            >
-              <p className="hover:text-red-500 hover:scale-105 hover:translate-3d duration-300 ease-in-out">
-                хөөш алишү
-              </p>
-            </Link>
-          </div>
+          <div></div>
           <div>
             <h3 className="text-2xl font-bold mb-4 font-mono">
               {t("Im")} <span className="text-orange-700">{t("Battulga")}</span>{" "}

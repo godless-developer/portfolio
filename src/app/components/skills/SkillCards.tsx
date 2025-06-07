@@ -18,7 +18,7 @@ const SkillCard = ({
         style={{ transformStyle: "preserve-3d" }}
       >
         {/* Front side */}
-        <div className="absolute w-full h-full md:h-[150px] md:w-full backface-hidden border border-gray-100 p-4 rounded-lg backdrop-blur-[12px] hover:border-green-700 duration-300 hover:scale-105 transition-all cursor-pointer ">
+        <div className="absolute w-full h-full md:h-[150px] md:w-full backface-hidden border border-gray-100 p-4 rounded-lg backdrop-blur-[12px] hover:border-orange-700 duration-300 hover:scale-105 transition-all cursor-pointer ">
           <CardContent className="p-6">
             <div className="flex flex-col gap-3 text-nowrap items-center text-center md:-mt-2.5">
               <div className={`p-3 rounded-full ${skill.color}`}>
@@ -32,7 +32,7 @@ const SkillCard = ({
         {/* Back side */}
         <div
           // style={{ backgroundImage: `url(/pfbr.png)` }}
-          className="bg-none backdrop-blur-[12px]  absolute w-full h-[185px] md:h-[150px] md:w-full backface-hidden overflow-hidden rotate-y-180 border hover:border-green-700 duration-300 hover:scale-105 transition-all border-gray-100 rounded-lg  text-white   cursor-pointer"
+          className="bg-none backdrop-blur-[12px]  absolute w-full h-[185px] md:h-[150px] md:w-full backface-hidden overflow-hidden rotate-y-180 border hover:border-orange-700 duration-300 hover:scale-105 transition-all border-gray-100 rounded-lg  text-white   cursor-pointer"
         >
           <div className="p-4 pr-2 flex flex-col items-center text-center justify-center w-full h-full backdrop-blur-[2px] rounded-lg">
             <h4 className="text-[15px] font-semibold ">{skill.name}</h4>

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronDown, Github } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import {
   CardDescription,
   CardFooter,

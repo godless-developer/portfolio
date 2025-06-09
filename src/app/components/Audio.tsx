@@ -1,6 +1,5 @@
 import { Volume2, VolumeOff } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { FaPlay, FaPause } from "react-icons/fa";
 
 export default function Audio() {
   const audioRef = useRef<HTMLAudioElement>(null);

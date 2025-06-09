@@ -1,11 +1,4 @@
-import {
-  ArrowBigDown,
-  ChevronDown,
-  Gamepad,
-  HeartPulse,
-  Music,
-  Stars,
-} from "lucide-react";
+import { Gamepad, HeartPulse, Music, Stars } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import {
   Dialog,
@@ -17,7 +10,6 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
 
 const AboutSection = () => {
   const { t } = useTranslation();

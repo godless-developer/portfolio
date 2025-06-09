@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       title: t("Buy Me Coffee"),
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
-      image: "/projectCoffee.png?height=400&width=600",
+      image: "/project/projectCoffee.png?height=400&width=600",
       tags: ["React", "GraphQL", "Tailwind CSS", "i18"],
       demoUrl: "https://buymecoffee-gilt.vercel.app",
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
@@ -39,9 +39,9 @@ const ProjectsSection = () => {
       title: t("viducate"),
       description:
         "Collaborative task manager with real-time updates and team features.",
-      image: "/projectViducate.png?height=400&width=600",
+      image: "/project/projectViducate.png?height=400&width=600",
       tags: ["Google Cloud Translation API", "Youtube transcript", "Next.js"],
-      demoUrl: "https://sorry-not-available/",
+      demoUrl: "not-available-sorry",
       class: "cursor-not-allowed",
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
@@ -49,7 +49,7 @@ const ProjectsSection = () => {
       title: t("Food Delivery"),
       description:
         "A full-featured online store with cart, checkout, and payment integration.",
-      image: "/projectFood.png",
+      image: "/project/projectFood.png",
       tags: ["React", "Node.js", "MongoDB", "Express"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/food-delivery-front",
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
       title: t("movieApp"),
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
-      image: "/projectMovie.png",
+      image: "/project/projectMovie.png",
       tags: ["React", "Shadcn", "OpenMovie API"],
       demoUrl: "https://movie-tuka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/movie-z",
@@ -67,7 +67,7 @@ const ProjectsSection = () => {
       title: "Todo-list",
       description:
         "Location-based weather app with 7-day forecasts and interactive maps.",
-      image: "/projectTodo.png?height=400&width=600",
+      image: "/project/projectTodo.png?height=400&width=600",
       tags: ["Javascript", "Tailwind CSS"],
       demoUrl: "https://todo-app-tukkaa.vercel.app/",
       githubUrl: "https://github.com/godless-developer/Todo-App",
@@ -76,7 +76,7 @@ const ProjectsSection = () => {
       title: "Pinecone-Monorepo",
       description:
         "Collaborative task manager with real-time updates and team features.",
-      image: "/projectPinecone.png?height=400&width=600",
+      image: "/project/projectPinecone.png?height=400&width=600",
       tags: ["React", "Cypress", "Tailwind CSS", "Monorepo"],
       demoUrl: "#",
       class: "cursor-not-allowed",
@@ -86,7 +86,7 @@ const ProjectsSection = () => {
       title: "Weather App",
       description:
         "A full-featured online store with cart, checkout, and payment integration.",
-      image: "/projectWeather.png",
+      image: "/project/projectWeather.png",
       tags: ["React", "OpenWeather API", "Geolocation"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "#",
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
       title: "Neg ym hiine dee",
       description:
         "Analytics dashboard for social media accounts with real-time data visualization.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/project/placeholder.svg?height=400&width=600",
       tags: ["React", "D3.js", "Node.js", "Express"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "#",
@@ -222,7 +222,7 @@ const ProjectsSection = () => {
                 <div>
                   <CardContent className="flex items-center justify-center p-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      {projects.slice(4, 8).map((project, index) => (
+                      {projects.slice(4, 7).map((project, index) => (
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, y: 20 }}

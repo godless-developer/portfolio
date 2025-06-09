@@ -82,7 +82,7 @@ const AboutSection = () => {
               <DialogTrigger asChild>
                 <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
                   <Image
-                    src="/proml.jpeg"
+                    src="/about/proml.jpeg"
                     alt="MLBB"
                     width={2000}
                     height={2000}
@@ -96,7 +96,7 @@ const AboutSection = () => {
                 <div
                   className="w-[100%] h-[100%]"
                   style={{
-                    backgroundImage: "url(/proml.jpeg)",
+                    backgroundImage: "url(/about/proml.jpeg)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
@@ -107,7 +107,7 @@ const AboutSection = () => {
               <DialogTrigger asChild>
                 <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
                   <Image
-                    src="/skinsml.jpeg"
+                    src="/about/skinsml.jpeg"
                     alt="MLBB"
                     width={2000}
                     height={2000}
@@ -121,7 +121,7 @@ const AboutSection = () => {
                 <div
                   className="w-[100%] h-[100%]"
                   style={{
-                    backgroundImage: "url(/skinsml.jpeg)",
+                    backgroundImage: "url(/about/skinsml.jpeg)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}

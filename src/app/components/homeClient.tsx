@@ -10,6 +10,7 @@ import "../../i18n";
 import Image from "next/image";
 import { MenuBar } from "./detailbox/Menubar";
 import SkillsSection from "./skills/Skilss";
+import Audio from "./Audio";
 
 export default function HomeClient() {
   return (
@@ -26,6 +27,7 @@ export default function HomeClient() {
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
+            <Audio />
           </div>
         </div>
       </header>

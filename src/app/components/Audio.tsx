@@ -44,9 +44,17 @@ export default function Audio() {
         className="text-white text-2xl hover:scale-110 transition cursor-pointer"
       >
         {isPlaying ? (
-          <Volume2 strokeWidth={1.5} width={20} />
+          <Volume2
+            strokeWidth={1.5}
+            width={20}
+            className="text-white hover:text-orange-700 transition-colors"
+          />
         ) : (
-          <VolumeOff strokeWidth={1.5} width={20} />
+          <VolumeOff
+            strokeWidth={1.5}
+            width={20}
+            className="text-white hover:text-orange-700 transition-colors"
+          />
         )}
       </button>
 

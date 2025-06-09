@@ -1,32 +1,71 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const { t } = useTranslation();
+
   return (
-    <div className=" flex flex-col gap-10 px-8 w-full h-[400px] justify-center absolute z-10 top-68 md:top-80">
+    <motion.div
+      className="flex flex-col gap-10 px-8 w-full h-[400px] justify-center absolute z-10 top-68 md:top-80"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+    >
       <div className="z-10">
-        <div className="mx-auto max-w-3xl text-center">
+        <motion.div
+          className="mx-auto max-w-3xl text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, delay: 0.3 }}
+        >
           <div>
             <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl">
-              <span className="text-orange-700">{t("Hello!")}</span>
-              <span className="text-white">{t("I&apos;m")}</span>{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-background">
-                  Fullstack Dev
-                </span>
-              </span>
+              <motion.span
+                className="text-orange-700 inline-block"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                key={t("Hello!")}
+              >
+                {t("Hello!")}
+              </motion.span>{" "}
+              <motion.span
+                className="text-white inline-block"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                key={t("I&apos;m")}
+              >
+                {t("I&apos;m")}
+              </motion.span>{" "}
+              <motion.span
+                className="inline-block"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                key={t("FullstackDev")}
+              >
+                {t("FullstackDev")}
+              </motion.span>
             </h1>
           </div>
-          <div>
+          <motion.div
+            className="mt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.8 }}
+            key={t("hero1word")}
+          >
             <p className="text-gray-400 text-shadow-2xl">
               {t("hero1word")}
               <br />
               {t("hero2word")}
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
+
 export default HeroSection;

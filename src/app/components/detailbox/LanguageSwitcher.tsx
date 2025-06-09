@@ -13,11 +13,13 @@ export default function LanguageSwitcher() {
   return (
     <button onClick={toggleLanguage} className="p-2 text-sm cursor-pointer">
       {i18n.language === "mn" ? (
-        <div className="hover:text-orange-700">
+        <div className="hover:text-orange-700 hover:scale-110 duration-200 ease-in-out">
           <Globe />
         </div>
       ) : (
-        <div className="hover:text-orange-700">MN</div>
+        <div className="hover:text-orange-700 hover:scale-110 duration-200 ease-in-out">
+          MN
+        </div>
       )}
     </button>
   );

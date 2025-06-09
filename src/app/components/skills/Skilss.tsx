@@ -14,6 +14,8 @@ import SkillCard from "./SkillCards";
 import { useTranslation } from "react-i18next";
 
 const SkillsSection = () => {
+  const { t } = useTranslation();
+
   const frontendSkills = [
     {
       name: "React",
@@ -104,20 +106,24 @@ const SkillsSection = () => {
       },
     },
   };
-  const { t } = useTranslation();
 
   return (
-    <section
+    <motion.section
       id="skills"
-      className=" pt-44 md:w-full absolute z-10 top-[1750px] md:top-[1790px]"
+      className="pt-44 md:w-full absolute px-6 z-10 top-[1750px] md:top-[1790px]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+          key={t("MyToolbox")}
         >
           <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
             <span>{t("MyToolbox")}</span>
@@ -126,10 +132,23 @@ const SkillsSection = () => {
           <p className="mt-4 text-lg text-gray-400">{t("myskillshere")}</p>
         </motion.div>
 
-        <div className="md:px-[20%]">
-          <h3 className="text-xl font-bold mb-10 text-center font-mono">
+        {/* Frontend */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="md:px-[20%]"
+        >
+          <motion.h3
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-xl font-bold mb-10 text-center font-mono"
+            key={t("frontend")}
+          >
             {t("frontend")}
-          </h3>
+          </motion.h3>
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 h-[400px] md:h-full"
             variants={container}
@@ -141,12 +160,25 @@ const SkillsSection = () => {
               <SkillCard key={index} skill={skill} />
             ))}
           </motion.div>
-        </div>
+        </motion.div>
 
-        <div className="mt-32 md:mt-56 md:px-[20%]">
-          <h3 className="text-xl font-bold mb-10 text-center font-mono">
+        {/* Backend */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-32 md:mt-56 md:px-[20%]"
+        >
+          <motion.h3
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-xl font-bold mb-10 text-center font-mono"
+            key={t("backend")}
+          >
             {t("backend")}
-          </h3>
+          </motion.h3>
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 h-[400px] md:h-full"
             variants={container}
@@ -158,12 +190,25 @@ const SkillsSection = () => {
               <SkillCard key={index} skill={skill} />
             ))}
           </motion.div>
-        </div>
+        </motion.div>
 
-        <div className="mt-32 md:mt-56 md:px-[20%] ">
-          <h3 className="text-xl font-bold mb-10 text-center font-mono">
+        {/* Other skills */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-32 md:mt-56 md:px-[20%]"
+        >
+          <motion.h3
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-xl font-bold mb-10 text-center font-mono"
+            key={t("otherskills")}
+          >
             {t("otherskills")}
-          </h3>
+          </motion.h3>
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 h-[400px] md:h-full"
             variants={container}
@@ -175,9 +220,10 @@ const SkillsSection = () => {
               <SkillCard key={index} skill={skill} />
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
+
 export default SkillsSection;

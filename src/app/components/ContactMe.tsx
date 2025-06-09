@@ -73,12 +73,23 @@ const ContactMe = () => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-16"
         >
-          <h2 className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Get In Touch
+          <motion.h2
+            initial={{ opacity: 0, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 2,
+              ease: "easeOut",
+            }}
+            key={t("Get In Touch")}
+            className="font-mono text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            {t("Get In Touch")}
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
-          </h2>
+          </motion.h2>
           <p className="mt-4 text-lg text-gray-400">
-            Have a project in mind or just want to say hi? Drop me a message!
+            {t(
+              "Have a project in mind or just want to say hi? Drop me a message!"
+            )}
           </p>
         </motion.div>
 
@@ -93,13 +104,23 @@ const ContactMe = () => {
               <CardHeader className="space-y-1">
                 <CardTitle className="text-2xl font-mono flex items-center justify-center gap-2">
                   <MessageSquare className="h-5 w-5 text-orange-700" />
-                  {t("Send a Message")}
+                  <motion.span
+                    initial={{ opacity: 0, x: 0 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 2.2,
+                      ease: "easeOut",
+                    }}
+                    key={t("Send a Message")}
+                  >
+                    {t("Send a Message")}
+                  </motion.span>
                 </CardTitle>
                 {isSubmitted ? (
                   <div></div>
                 ) : (
                   <CardDescription className="py-5 text-gray-400">
-                    I&apos;ll get back to you as soon as possible!
+                    {t("I&apos;ll get back to you as soon as possible!")}
                   </CardDescription>
                 )}
               </CardHeader>
@@ -110,7 +131,7 @@ const ContactMe = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, type: "spring" }}
-                      className="rounded-lg bg-none backdrop-blur-[20px] py-10 px-10 mt-8 text-center shadow-xl/60 border-[2px] border-white flex flex-col gap-4 items-center text-shadow-lg/80 relative"
+                      className="rounded-lg bg-none backdrop-blur-[20px] py-10 px-10 mt-8 text-center shadow-xl/60 border-[0.5px] border-white flex flex-col gap-4 items-center text-shadow-lg/80 relative"
                     >
                       <ConfettiExplosion
                         force={0.6}
@@ -119,12 +140,21 @@ const ContactMe = () => {
                         width={1600}
                         height={800}
                       />
-                      <div className="w-8 h-8 flex justify-center items-center bg-green-900 rounded-full">
+                      <div className="w-8 h-8 flex justify-center items-center bg-orange-900 rounded-full">
                         <Check color="white" />
                       </div>
-                      <h3 className="text-lg font-medium mb-2 flex items-center gap-2 justify-center">
+                      <motion.h3
+                        initial={{ opacity: 0, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 2.2,
+                          ease: "easeOut",
+                        }}
+                        key={t("Message sent successfully!")}
+                        className="text-lg font-medium mb-2 flex items-center gap-2 justify-center"
+                      >
                         {t("Message sent successfully!")}
-                      </h3>
+                      </motion.h3>
                       <p className="text-wrap">
                         {t(
                           "Thanks for reaching out. I'll get back to you soon."
@@ -136,7 +166,19 @@ const ContactMe = () => {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-10">
                     <div className="space-y-2">
-                      <Label htmlFor="name">{t("Name")}</Label>
+                      <Label htmlFor="name">
+                        <motion.span
+                          initial={{ opacity: 0, x: 0 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 2.2,
+                            ease: "easeOut",
+                          }}
+                          key={t("Name")}
+                        >
+                          {t("Name")}
+                        </motion.span>
+                      </Label>
                       <Input
                         id="name"
                         name="name"
@@ -148,7 +190,19 @@ const ContactMe = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">{t("Email")}</Label>
+                      <Label htmlFor="email">
+                        <motion.span
+                          initial={{ opacity: 0, x: 0 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 2.2,
+                            ease: "easeOut",
+                          }}
+                          key={t("Email")}
+                        >
+                          {t("Email")}
+                        </motion.span>
+                      </Label>
                       <Input
                         id="email"
                         name="email"
@@ -161,7 +215,19 @@ const ContactMe = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="message">{t("Message")}</Label>
+                      <Label htmlFor="message">
+                        <motion.span
+                          initial={{ opacity: 0, x: 0 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 2.2,
+                            ease: "easeOut",
+                          }}
+                          key={t("Message")}
+                        >
+                          {t("Message")}
+                        </motion.span>
+                      </Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -202,10 +268,19 @@ const ContactMe = () => {
                           {t("Sending...")}
                         </span>
                       ) : (
-                        <span className="flex items-center justify-center gap-2">
+                        <motion.span
+                          initial={{ opacity: 0, x: 0 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 2.2,
+                            ease: "easeOut",
+                          }}
+                          key={t("Send Message")}
+                          className="flex items-center justify-center gap-2"
+                        >
                           <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                           {t("Send Message")}
-                        </span>
+                        </motion.span>
                       )}
                     </Button>
                   </form>

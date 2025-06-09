@@ -1,6 +1,6 @@
 "use client";
 
-import type * as React from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { User, User2Icon, Sparkles, FolderKanban } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -48,108 +48,58 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-const itemVariants = {
-  initial: { rotateX: 0, opacity: 1 },
-  hover: { rotateX: -90, opacity: 0 },
-};
-
-const backVariants = {
-  initial: { rotateX: 90, opacity: 0 },
-  hover: { rotateX: 0, opacity: 1 },
-};
-
-const glowVariants = {
-  initial: { opacity: 0, scale: 0.8 },
-  hover: {
-    opacity: 1,
-    scale: 2,
-    transition: {
-      opacity: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
-      scale: { duration: 0.5, type: "spring", stiffness: 300, damping: 25 },
-    },
-  },
-};
-{
-}
-
-const navGlowVariants = {
-  initial: { opacity: 0 },
-  hover: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: [0.4, 0, 0.2, 1],
-    },
-  },
-};
-
-const sharedTransition = {
-  type: "spring",
-  stiffness: 100,
-  damping: 20,
-  duration: 0.5,
-};
-
 export function MenuBar() {
   const { t } = useTranslation();
+  const [activeHref, setActiveHref] = useState<string>("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = "";
+      menuItems.forEach((item) => {
+        const section = document.querySelector(item.href);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = item.href;
+          }
+        }
+      });
+      setActiveHref(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <motion.nav
-      className="p-[13px] rounded-2xl relative overflow-hidden"
-      initial="initial"
-      whileHover="hover"
-    >
-      <motion.div
-        className={`absolute -inset-2 bg-gradient-radial from-transparent 
-            via-purple-400/30 via-60%
-         to-transparent rounded-3xl z-0 pointer-events-none`}
-        variants={navGlowVariants}
-      />
+    <motion.nav className="p-[13px] rounded-2xl relative overflow-hidden">
       <ul className="flex items-center gap-12 relative z-10 px-8">
         {menuItems.map((item, index) => (
-          <motion.li key={index} className="relative">
-            <motion.div
-              className="block rounded-xl overflow-visible group relative"
-              style={{ perspective: "600px" }}
-              whileHover="hover"
-              initial="initial"
+          <motion.li key={index} className="relative group">
+            <motion.a
+              href={item.href}
+              onClick={() => setActiveHref(item.href)}
+              className="flex flex-col items-center justify-center text-white px-4 py-2 relative gap-1"
             >
-              <motion.div
-                className="absolute inset-0 z-0 pointer-events-none"
-                variants={glowVariants}
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
-                  opacity: 0,
-                  borderRadius: "16px",
-                }}
+              <motion.span
+                key={t(item.label)}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="relative z-10"
+              >
+                {t(item.label)}
+              </motion.span>
+
+              <motion.span
+                className={`h-[1px] w-full bg-orange-700 origin-left transition-all duration-300 ease-in-out ${
+                  activeHref === item.href ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100`}
+                style={{ transformOrigin: "left" }}
               />
-              <motion.a
-                href={item.href}
-                className="flex items-center gap-2 text-nowrap px-4 py-2 relative z-10 bg-transparent text-white group-hover:text-orange-800 hover:text-shadow-lg/50 hover:text-shadow-white transition-colors rounded-xl"
-                variants={itemVariants}
-                transition={sharedTransition}
-                style={{
-                  transformStyle: "preserve-3d",
-                  transformOrigin: "center bottom",
-                }}
-              >
-                <span>{t(item.label)}</span>
-              </motion.a>
-              <motion.a
-                href={item.href}
-                className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-orange-800 group-hover:text-orange-800 hover:text-shadow-lg/50 hover:text-shadow-white transition-colors rounded-xl"
-                variants={backVariants}
-                transition={sharedTransition}
-                style={{
-                  transformStyle: "preserve-3d",
-                  transformOrigin: "center top",
-                  rotateX: 90,
-                }}
-              >
-                <span>{t(item.label)}</span>
-              </motion.a>
-            </motion.div>
+            </motion.a>
           </motion.li>
         ))}
       </ul>

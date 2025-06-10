@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -32,12 +33,212 @@ const AboutSection = () => {
     {
       icon: <Gamepad className="h-6 w-6" />,
       label: "Gaming",
+      mlbb: (
+        <div>
+          <div className="flex gap-4 mb-3">
+            <Image
+              src="/mlbbLogo.png"
+              alt="mlbbLogo"
+              width={2000}
+              height={2000}
+              className="w-[200px] h-[100px] object-fill"
+            />
+            <div className="bg-white rounded-2xl">
+              <Image
+                src="/csgoLogo.png"
+                alt="mlbbLogo"
+                width={2000}
+                height={2000}
+                className="w-[200px] h-[90px] object-fill text-white"
+              />
+            </div>
+            <Image
+              src="/tetris.png"
+              alt="mlbbLogo"
+              width={2000}
+              height={2000}
+              className="w-[200px] h-[100px] object-fill text-white"
+            />
+            <Image
+              src="/pubg.png"
+              alt="mlbbLogo"
+              width={2000}
+              height={2000}
+              className="w-[200px] h-[100px] object-fill text-white"
+            />
+          </div>
+          <div className="flex justify-around gap-2">
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
+                  <Image
+                    src="/proml.jpeg"
+                    alt="MLBB"
+                    width={2000}
+                    height={2000}
+                    className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogTitle></DialogTitle>
+              <DialogHeader></DialogHeader>
+              <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
+                <div
+                  className="w-[100%] h-[100%]"
+                  style={{
+                    backgroundImage: "url(/proml.jpeg)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </DialogContent>
+            </Dialog>
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
+                  <Image
+                    src="/skinsml.jpeg"
+                    alt="MLBB"
+                    width={2000}
+                    height={2000}
+                    className="rounded-lg h-[150px] w-[100%] md:h-[205px] md:w-[300px] object-cover"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogTitle></DialogTitle>
+              <DialogHeader></DialogHeader>
+              <DialogContent className="sm:min-w-[1200px] h-[30%] md:h-[79%] p-0 rounded-lg overflow-hidden">
+                <div
+                  className="w-[100%] h-[100%]"
+                  style={{
+                    backgroundImage: "url(/skinsml.jpeg)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </div>
+      ),
       description:
         "Gaming helps me relax and connect with friends. I love immersive story-driven games.",
     },
     {
       icon: <Music className="h-6 w-6" />,
       label: "Music",
+      audio: (
+        <div className="h-[320px] md:h-[600px] overflow-y-scroll scrollbar-none flex flex-col gap-[8px]">
+          <div className="md:flex md:gap-6">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/good-credit/1802175271?i=1802175545&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1802175545&amp;theme=auto"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/roly-poly/1804698377?i=1804698378&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1804698378&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+          <div className="md:flex md:gap-6 ">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/hot-line/1122635375?i=1122636164&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1122636164&amp;theme=auto"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/peekaboo-feat-azchike/1781270319?i=1781270545&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1781270545&amp;theme=dark"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+          <div className="md:flex md:gap-6 ">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/animals/1422651829?i=1422651844&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1422651844&amp;theme=auto"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "8px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/i-got-love-feat/1604435502?i=1604435517&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1604435517&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+          <div className="md:flex md:gap-6 ">
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/%D1%8D%D0%BD%D1%8D-%D0%B1%D0%BE%D0%BB-%D0%B4%D1%83%D1%80%D0%BB%D0%B0%D0%BB-%D0%B1%D0%B8%D1%88/1222984049?i=1222984692&&amp;itscg=30200&&amp;itsct=music_box_player&&amp;ls=1&&amp;app=music&&amp;mttnsubad=1222984692&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+            <iframe
+              title="Media player"
+              src="https://embed.music.apple.com/us/album/%E5%85%AB%E6%96%B9%E6%9D%A5%E8%B4%A2/1763742878?i=1763742879&&amp;itscg=30200&&amp;itsct=music_box_link&&amp;ls=1&app=music&mttnsubad=1763742879&amp;theme=auto"
+              id="embedPlayer"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+              allow="autoplay *; encrypted-media *; clipboard-write"
+              style={{
+                border: "0px",
+                borderRadius: "12px",
+                width: "310px",
+                height: "160px",
+              }}
+            />
+          </div>
+        </div>
+      ),
       description:
         "Music keeps me inspired while I code. I enjoy exploring different genres and beats.",
     },
@@ -46,7 +247,7 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about"
-      className="pb-20 pt-60 px-8 z-10 absolute top-160 md:top-190 w-full"
+      className="pb-20 pt-60 px-8 z-10 absolute top-160 md:top-190 w-[400px] md:w-[1500px]"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
@@ -182,8 +383,11 @@ const AboutSection = () => {
                       </div>
                     </DialogTitle>
                   </DialogHeader>
-                  <div className="text-white text-center px-4">
-                    {interest.description}
+                  <div>
+                    <div className=" flex flex-col items-center justify-start text-center gap-2">
+                      {interest.audio}
+                    </div>
+                    {interest.mlbb}
                   </div>
                   <DialogFooter></DialogFooter>
                 </DialogContent>

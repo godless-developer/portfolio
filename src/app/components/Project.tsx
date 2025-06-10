@@ -28,8 +28,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: t("Buy Me Coffee"),
-      description:
-        "Location-based weather app with 7-day forecasts and interactive maps.",
+      description: t("buymecoffeeDescription"),
       image: "/project/projectCoffee.png?height=400&width=600",
       tags: ["React", "GraphQL", "Tailwind CSS", "i18"],
       demoUrl: "https://buymecoffee-gilt.vercel.app",
@@ -37,8 +36,7 @@ const ProjectsSection = () => {
     },
     {
       title: t("viducate"),
-      description:
-        "Collaborative task manager with real-time updates and team features.",
+      description: t("viducateDescription"),
       image: "/project/projectViducate.png?height=400&width=600",
       tags: ["Google Cloud Translation API", "Youtube transcript", "Next.js"],
       demoUrl: "not-available-sorry",
@@ -47,8 +45,8 @@ const ProjectsSection = () => {
     },
     {
       title: t("Food Delivery"),
-      description:
-        "A full-featured online store with cart, checkout, and payment integration.",
+      class: "cursor-not-allowed",
+      description: t("foodDeliveryDescription"),
       image: "/project/projectFood.png",
       tags: ["React", "Node.js", "MongoDB", "Express"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
@@ -56,8 +54,7 @@ const ProjectsSection = () => {
     },
     {
       title: t("movieApp"),
-      description:
-        "Analytics dashboard for social media accounts with real-time data visualization.",
+      description: t("movieAppDescription"),
       image: "/project/projectMovie.png",
       tags: ["React", "Shadcn", "OpenMovie API"],
       demoUrl: "https://movie-tuka.vercel.app/",

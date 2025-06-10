@@ -36,5 +36,9 @@
   "FullstackDev": "Fullstack Dev",
   "I&apos;ll get back to you as soon as possible!": "I'll get back to you as soon as possible!",
   "Get In Touch": "Get In Touch",
-  "Have a project in mind or just want to say hi? Drop me a message!": "If you are planning a project, get in touch. Let's create something amazing together."
+  "Have a project in mind or just want to say hi? Drop me a message!": "If you are planning a project, get in touch. Let's create something amazing together.",
+  "viducateDescription": "A project using Youtube transcript and Google Cloud Translation API, and by doing the hardest part myself, I was able to speed up my team's process by 30%. Responsible for front-end development and created an easy-to-use UI.",
+  "foodDeliveryDescription": "The development focused on the ordering system and the ease of use of the admin area.By starting this project, I understood 100% the operation on Cloudinary and MongoDb.",
+  "buymecoffeeDescription": "A modern web application designed to mimic a creator support platform where users can send small donations (or “coffees”) to their favorite creators. The goal of the project was to practice full-stack development, integrating real-world features such as payment processing and user interaction.",
+  "movieAppDescription": "Movie App is a sleek, dynamic web application built with React, designed to enhance frontend development skills by integrating live APIs. This project API Integration – Fetching real-time movie data from TMDB/OMDb, State Management – Efficiently handling data with React hooks (useState, useEffect, etc.),User-Friendly UI – A clean, responsive interface for browsing, searching, and viewing detailed movie information.Perfect for practicing modern React workflows and API consumption!"
 }

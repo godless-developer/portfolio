@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import SkillCard from "./SkillCards";
 import { useTranslation } from "react-i18next";
+import ShinyText from "@/app/Bits/ShinyText";
 
 const SkillsSection = () => {
   const { t } = useTranslation();
@@ -110,7 +111,7 @@ const SkillsSection = () => {
   return (
     <motion.section
       id="skills"
-      className="pt-44 md:w-full absolute px-6 z-10 top-[1750px] md:top-[1790px]"
+      className="pt-44 md:w-full absolute px-6 z-10 top-[2200px] md:top-[1790px]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
@@ -129,7 +130,14 @@ const SkillsSection = () => {
             <span>{t("MyToolbox")}</span>
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </h2>
-          <p className="mt-4 text-lg text-gray-400">{t("myskillshere")}</p>
+          <div className="mt-4 text-lg text-gray-400">
+            <ShinyText
+              text={t("myskillshere")}
+              disabled={false}
+              speed={3}
+              className="custom-class"
+            />
+          </div>
         </motion.div>
 
         {/* Frontend */}

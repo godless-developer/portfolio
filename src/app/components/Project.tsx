@@ -102,7 +102,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="pb-20 pt-24 px-8 absolute z-10 top-960 md:top-740 animate-fade-in-up"
+      className="pb-20 pt-24 px-8 absolute z-10 top-1060 md:top-740 animate-fade-in-up"
     >
       <div className="container">
         <motion.div

@@ -18,6 +18,7 @@ const SkillCard = ({
         style={{ transformStyle: "preserve-3d" }}
       >
         {/* Front side */}
+
         <div className="absolute w-full h-full md:h-[150px] md:w-full backface-hidden border border-gray-100 p-4 rounded-lg backdrop-blur-[12px] hover:border-orange-700 duration-300 hover:scale-105 transition-all cursor-pointer ">
           <CardContent className="p-6">
             <div className="flex flex-col gap-3 text-nowrap items-center text-center md:-mt-2.5">

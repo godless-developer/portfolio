@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Cursor from "./components/detailbox/Cursor";
+import SplashCursor from "./Bits/Cursor";
 
 const HomeClient = dynamic(() => import("./components/homeClient"), {
   ssr: false,
@@ -10,7 +10,7 @@ const HomeClient = dynamic(() => import("./components/homeClient"), {
 export default function Home() {
   return (
     <div className="cursor-default">
-      <Cursor />
+      <SplashCursor />
       <HomeClient />;
     </div>
   );

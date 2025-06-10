@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { ConfettiExplosion } from "react-confetti-explosion";
+import ShinyText from "../Bits/ShinyText";
 
 const ContactMe = () => {
   const { t } = useTranslation();
@@ -63,7 +64,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className=" px-8 pt-40 absolute z-10 top-1522 h-[1100px] md:top-1080 flex flex-col justify-between items-center"
+      className=" px-8 pt-40 absolute z-10 top-1610 h-[1100px] md:top-1080 flex flex-col justify-between items-center"
     >
       <div className="container">
         <motion.div
@@ -86,11 +87,16 @@ const ContactMe = () => {
             {t("Get In Touch")}
             <span className="block h-1.5 w-20 bg-orange-700 mx-auto mt-2"></span>
           </motion.h2>
-          <p className="mt-4 text-lg text-gray-400">
-            {t(
-              "Have a project in mind or just want to say hi? Drop me a message!"
-            )}
-          </p>
+          <div className="mt-4 text-lg text-gray-400">
+            <ShinyText
+              text={t(
+                "Have a project in mind or just want to say hi? Drop me a message!"
+              )}
+              disabled={false}
+              speed={3}
+              className="custom-class"
+            />
+          </div>
         </motion.div>
 
         <div className="mx-auto max-w-2xl">
@@ -120,7 +126,12 @@ const ContactMe = () => {
                   <div></div>
                 ) : (
                   <CardDescription className="py-5 text-gray-400">
-                    {t("I&apos;ll get back to you as soon as possible!")}
+                    <ShinyText
+                      text={t("I&apos;ll get back to you as soon as possible!")}
+                      disabled={false}
+                      speed={3}
+                      className="custom-class"
+                    />
                   </CardDescription>
                 )}
               </CardHeader>

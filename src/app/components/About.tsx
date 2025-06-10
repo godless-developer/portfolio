@@ -13,6 +13,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ProfileCard from "../Bits/ProfileCard";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -275,12 +276,24 @@ const AboutSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div
-          className="hidden md:block"
+          className=" md:block"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
-        ></motion.div>
+        >
+          <ProfileCard
+            name="B.Battulga"
+            title="Fullstack Developer"
+            handle="bt_tulgaagd"
+            status="Online"
+            contactText="Contact Me"
+            avatarUrl="/profile3.png"
+            showUserInfo={true}
+            enableTilt={true}
+            onContactClick={() => console.log("Contact clicked")}
+          />
+        </motion.div>
 
         <motion.div
           className="space-y-6"

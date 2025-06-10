@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import BlurText from "../Bits/BlurText";
+import ShinyText from "../Bits/ShinyText";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -38,15 +40,14 @@ const HeroSection = () => {
               >
                 {t("I&apos;m")}
               </motion.span>{" "}
-              <motion.span
+              <BlurText
+                text={t("FullstackDev")}
+                delay={150}
+                animateBy="words"
+                direction="top"
                 className="inline-block"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
                 key={t("FullstackDev")}
-              >
-                {t("FullstackDev")}
-              </motion.span>
+              />
             </h1>
           </div>
           <motion.div
@@ -56,11 +57,21 @@ const HeroSection = () => {
             transition={{ duration: 0.9, delay: 0.8 }}
             key={t("hero1word")}
           >
-            <p className="text-gray-400 text-shadow-2xl">
-              {t("hero1word")}
+            <div className="text-gray-400 text-shadow-2xl">
+              <ShinyText
+                text={t("hero1word")}
+                disabled={false}
+                speed={3}
+                className="custom-class"
+              />
               <br />
-              {t("hero2word")}
-            </p>
+              <ShinyText
+                text={t("hero2word")}
+                disabled={false}
+                speed={3}
+                className="custom-class"
+              />
+            </div>
           </motion.div>
         </motion.div>
       </div>

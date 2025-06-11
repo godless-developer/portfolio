@@ -38,7 +38,7 @@ const AboutSection = () => {
         <div>
           <div className="flex gap-4 mb-3">
             <Image
-              src="/mlbbLogo.png"
+              src="/about/mlbbLogo.png"
               alt="mlbbLogo"
               width={2000}
               height={2000}
@@ -46,7 +46,7 @@ const AboutSection = () => {
             />
             <div className="bg-white rounded-2xl">
               <Image
-                src="/csgoLogo.png"
+                src="/about/csgoLogo.png"
                 alt="mlbbLogo"
                 width={2000}
                 height={2000}
@@ -54,14 +54,14 @@ const AboutSection = () => {
               />
             </div>
             <Image
-              src="/tetris.png"
+              src="/about/tetris.png"
               alt="mlbbLogo"
               width={2000}
               height={2000}
               className="w-[200px] h-[100px] object-fill text-white"
             />
             <Image
-              src="/pubg.png"
+              src="/about/pubg.png"
               alt="mlbbLogo"
               width={2000}
               height={2000}
@@ -73,7 +73,7 @@ const AboutSection = () => {
               <DialogTrigger asChild>
                 <div className="shadow-lg/80 overflow-hidden rounded-lg cursor-pointer hover:scale-105 hover:rotate-2 ease-in-out duration-300">
                   <Image
-                    src="/proml.jpeg"
+                    src="/about/proml.jpeg"
                     alt="MLBB"
                     width={2000}
                     height={2000}
@@ -87,7 +87,7 @@ const AboutSection = () => {
                 <div
                   className="w-[100%] h-[100%]"
                   style={{
-                    backgroundImage: "url(/proml.jpeg)",
+                    backgroundImage: "url(/about/proml.jpeg)",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}

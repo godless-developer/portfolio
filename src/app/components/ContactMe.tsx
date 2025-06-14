@@ -2,7 +2,7 @@
 import type React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, MessageSquare, Send } from "lucide-react";
+import { Check, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   CardContent,
@@ -16,6 +16,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { ConfettiExplosion } from "react-confetti-explosion";
 import ShinyText from "../Bits/ShinyText";
+import Link from "next/link";
+import Image from "next/image";
 
 const ContactMe = () => {
   const { t } = useTranslation();
@@ -142,7 +144,7 @@ const ContactMe = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, type: "spring" }}
-                      className="rounded-lg bg-none backdrop-blur-[20px] py-10 px-10 mt-8 text-center shadow-xl/60 border-[0.5px] border-white flex flex-col gap-4 items-center text-shadow-lg/80 relative"
+                      className="rounded-lg bg-none backdrop-blur-[20px] py-10 px-10 mt-8 text-center shadow-xl/60 border-[0.5px] border-white flex flex-col gap-4 items-center  relative"
                     >
                       <ConfettiExplosion
                         force={0.6}
@@ -151,8 +153,8 @@ const ContactMe = () => {
                         width={1600}
                         height={800}
                       />
-                      <div className="w-8 h-8 flex justify-center items-center bg-orange-900 rounded-full">
-                        <Check color="white" />
+                      <div className="w-8 h-8 flex justify-center items-center bg-green-900 rounded-full">
+                        <Check color="white" size={20} />
                       </div>
                       <motion.h3
                         initial={{ opacity: 0, x: 0 }}
@@ -242,7 +244,7 @@ const ContactMe = () => {
                       <Textarea
                         id="message"
                         name="message"
-                        placeholder="Hello! I'd like to talk about..."
+                        placeholder={t("Hello! I'd like to talk about...")}
                         rows={5}
                         required
                         value={formState.message}
@@ -252,8 +254,9 @@ const ContactMe = () => {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full group cursor-pointer"
+                      className="w-full group cursor-pointer transition-all duration-300 bg-white text-black hover:bg-orange-500 hover:text-white opacity-80"
                       disabled={isSubmitting}
+                      variant={"ghost"}
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center gap-2">
@@ -289,11 +292,51 @@ const ContactMe = () => {
                           key={t("Send Message")}
                           className="flex items-center justify-center gap-2"
                         >
-                          <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          <Image
+                            src={"/gmail.png"}
+                            alt="gamil"
+                            width={2000}
+                            height={2000}
+                            className="h-4 w-5 transition-transform group-hover:translate-x-0.5"
+                          />
                           {t("Send Message")}
                         </motion.span>
                       )}
                     </Button>
+                    <div className="w-full flex gap-2 ">
+                      <Link
+                        href={
+                          "https://www.messenger.com/e2ee/t/9756331654424094"
+                        }
+                        target="_blank"
+                        className="w-1/2 text-center backdrop-blur-[12px] hover:text-cyan-800 transition-all duration-300 rounded-lg p-1.5 flex justify-center items-center gap-2"
+                      >
+                        <Image
+                          src={"/messenger.png"}
+                          alt="messenger"
+                          width={2000}
+                          height={2000}
+                          className="h-4 w-4"
+                        />
+                        <p>{t("Messenger")}</p>
+                      </Link>
+                      <a
+                        href="tel:+97688507838"
+                        className="w-1/2 text-center backdrop-blur-[12px] hover:text-green-800 transition-all duration-300 rounded-lg p-1.5 flex justify-center items-center gap-2"
+                      >
+                        <Image
+                          src={"/call.png"}
+                          alt="call"
+                          width={2000}
+                          height={2000}
+                          className="h-4 w-4"
+                        />
+                        <span className="group-hover:hidden">{t("Call")}</span>
+                        <span className="hidden group-hover:inline">
+                          88507838
+                        </span>
+                      </a>
+                    </div>
                   </form>
                 )}
               </CardContent>

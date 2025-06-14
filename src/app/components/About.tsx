@@ -291,7 +291,10 @@ const AboutSection = () => {
             avatarUrl="/profile3.png"
             showUserInfo={true}
             enableTilt={true}
-            onContactClick={() => console.log("Contact clicked")}
+            onContactClick={() => {
+              const contactSection = document.getElementById("contact");
+              contactSection?.scrollIntoView({ behavior: "smooth" });
+            }}
           />
         </motion.div>
 

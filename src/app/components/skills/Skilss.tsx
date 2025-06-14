@@ -21,82 +21,120 @@ const SkillsSection = () => {
     {
       name: "React",
       icon: <Braces className="h-6 w-6" />,
-      color: "bg-blue-100 text-blue-600",
+      color: "text-blue-600",
+      bg: "bg-blue-100",
       percentage: 78,
+      hover: "hover:border-blue-600",
+      bgColor: "bg-blue-600"
     },
     {
       name: "Next.js",
       icon: <Globe className="h-6 w-6" />,
-      color: "bg-gray-100 text-gray-600",
+      color: "text-gray-600",
+      bg: "bg-gray-100",
       percentage: 71,
+      hover: "hover:border-gray-600",
+      bgColor: "bg-gray-600"
     },
     {
       name: "TypeScript",
       icon: <Braces className="h-6 w-6" />,
-      color: "bg-blue-100 text-blue-600",
+      color: "text-blue-600",
+      bg: "bg-blue-100",
       percentage: 82,
+      hover: "hover:border-blue-600",
+      bgColor: "bg-blue-600"
     },
     {
       name: "Tailwind CSS",
       icon: <Palette className="h-6 w-6" />,
-      color: "bg-cyan-100 text-cyan-600",
+      color: "text-cyan-600",
+      bg: "bg-cyan-100",
       percentage: 98,
+      hover: "hover:border-cyan-600",
+      bgColor: "bg-cyan-600"
     },
-  ];
+  ]
 
   const backendSkills = [
     {
       name: "Node.js",
       icon: <Server className="h-6 w-6" />,
-      color: "bg-green-100 text-green-600",
+      color: "text-green-600",
+      bg: "bg-green-100",
       percentage: 72,
+      hover: "hover:border-green-600",
+      bgColor: "bg-green-600"
     },
     {
       name: "Express",
       icon: <Server className="h-6 w-6" />,
-      color: "bg-gray-100 text-gray-600",
+      color: "text-gray-600",
+      bg: "bg-gray-100",
       percentage: 72,
+      hover: "hover:border-gray-600",
+      bgColor: "bg-gray-600"
     },
     {
       name: "MongoDB",
       icon: <Database className="h-6 w-6" />,
-      color: "bg-green-100 text-green-600",
+      color: "text-green-600",
+      bg: "bg-green-100",
       percentage: 86,
+      hover: "hover:border-green-600",
+      bgColor: "bg-green-600"
     },
     {
       name: "PostgreSQL",
       icon: <Database className="h-6 w-6" />,
-      color: "bg-blue-100 text-blue-600",
+      color: "text-blue-600",
+      bg: "bg-blue-100",
       percentage: 78,
+      hover: "hover:border-blue-600",
+      bgColor: "bg-blue-600"
     },
-  ];
+  ]
 
   const otherSkills = [
     {
       name: "Git",
       icon: <Layers className="h-6 w-6" />,
-      color: "bg-orange-100 text-orange-600",
+      color: "text-orange-600",
+      bg: "bg-orange-100",
       percentage: 81,
+      hover: "hover:border-orange-600",
+      bgColor: "bg-orange-600"
     },
     {
       name: "AI",
       icon: <SplinePointer color="#dd08b6" className="h-6 w-6" />,
-      color: "bg-purple-100 text-purple-600",
+      color: "text-purple-600",
+      bg: "bg-purple-100",
       percentage: 75,
+      hover: "hover:border-purple-600",
+      bgColor: "bg-purple-600"
     },
     {
       name: "Responsive",
       icon: <Smartphone className="h-6 w-6" />,
-      color: "bg-purple-100 text-purple-600",
+      color: "text-purple-600",
+      bg: "bg-purple-100",
       percentage: 93,
+      hover: "hover:border-purple-600",
+      bgColor: "bg-purple-600"
     },
     {
       name: "UI/UX",
       icon: <Sparkles className="h-6 w-6" />,
-      color: "bg-pink-100 text-pink-600",
+      color: "text-pink-600",
+      bg: "bg-pink-100",
       percentage: 86,
+      hover: "hover:border-pink-600",
+      bgColor: "bg-pink-600"
     },
-  ];
+  ]
+  
+ 
 
   const container = {
     hidden: { opacity: 0 },

@@ -212,11 +212,13 @@
 }
 
 .pc-avatar-content {
-  mix-blend-mode: screen;
+  mix-blend-mode: normal !important;
   overflow: hidden;
 }
 
 .pc-avatar-content .avatar {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
   width: 100%;
   position: absolute;
   left: 50%;
@@ -226,19 +228,10 @@
 }
 
 .pc-avatar-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  backdrop-filter: blur(30px);
-  mask: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 1) 90%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  pointer-events: none;
+  backdrop-filter: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  display: none !important; /* Шууд устгаж болно */
 }
 
 .pc-user-info {
@@ -271,6 +264,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   flex-shrink: 0;
+  padding-top: 2px;
 }
 
 .pc-mini-avatar img {

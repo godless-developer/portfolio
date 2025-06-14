@@ -35,14 +35,16 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
     {
-      title: t("viducate"),
-      description: t("viducateDescription"),
-      image: "/project/projectViducate.png?height=400&width=600",
-      tags: ["Google Cloud Translation API", "Youtube transcript", "Next.js"],
-      demoUrl: "not-available-sorry",
+      title: t("Monorepo"),
+      description:
+        t("monorepoDescription"),
+      image: "/project/projectPinecone.png?height=400&width=600",
+      tags: ["React", "Cypress", "Tailwind CSS", "Monorepo"],
+      demoUrl: "#",
       class: "cursor-not-allowed",
-      githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
+      githubUrl: "https://github.com/pinecone-studio/pinecone-intern-monorepo",
     },
+    
     {
       title: t("Food Delivery"),
       class: "cursor-not-allowed",
@@ -60,33 +62,33 @@ const ProjectsSection = () => {
       demoUrl: "https://movie-tuka.vercel.app/",
       githubUrl: "https://github.com/godless-developer/movie-z",
     },
+    
     {
-      title: "Todo-list",
-      description:
-        "Location-based weather app with 7-day forecasts and interactive maps.",
-      image: "/project/projectTodo.png?height=400&width=600",
-      tags: ["Javascript", "Tailwind CSS"],
-      demoUrl: "https://todo-app-tukkaa.vercel.app/",
-      githubUrl: "https://github.com/godless-developer/Todo-App",
-    },
-    {
-      title: "Pinecone-Monorepo",
-      description:
-        "Collaborative task manager with real-time updates and team features.",
-      image: "/project/projectPinecone.png?height=400&width=600",
-      tags: ["React", "Cypress", "Tailwind CSS", "Monorepo"],
-      demoUrl: "#",
+      title: t("viducate"),
+      description: t("viducateDescription"),
+      image: "/project/projectViducate.png?height=400&width=600",
+      tags: ["Google Cloud Translation API", "Youtube transcript", "Next.js"],
+      demoUrl: "not-available-sorry",
       class: "cursor-not-allowed",
-      githubUrl: "https://github.com/pinecone-studio/pinecone-intern-monorepo",
+      githubUrl: "https://github.com/orgs/Leap-2b/projects/8",
     },
     {
-      title: "Weather App",
+      title: t("weather"),
       description:
-        "A full-featured online store with cart, checkout, and payment integration.",
+        t("weatherDescription"),
       image: "/project/projectWeather.png",
       tags: ["React", "OpenWeather API", "Geolocation"],
       demoUrl: "https://weather-app-tukka.vercel.app/",
       githubUrl: "#",
+    },
+    {
+      title: t("Todo-list"),
+      description:
+        t("todoDescription"),
+      image: "/project/projectTodo.png?height=400&width=600",
+      tags: ["Javascript", "Tailwind CSS"],
+      demoUrl: "https://todo-app-tukkaa.vercel.app/",
+      githubUrl: "https://github.com/godless-developer/Todo-App",
     },
     {
       title: "Neg ym hiine dee",

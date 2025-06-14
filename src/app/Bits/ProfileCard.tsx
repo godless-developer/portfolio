@@ -255,8 +255,9 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               loading="lazy"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.style.display = "none";
+                target.style.display = "/profile3.png";
               }}
+              unoptimized
             />
             {showUserInfo && (
               <div className="pc-user-info">

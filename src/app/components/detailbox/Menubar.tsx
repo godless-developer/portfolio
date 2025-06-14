@@ -96,7 +96,7 @@ export function MenuBar() {
               <motion.span
                 className={`h-[1px] w-full bg-orange-700 origin-left transition-all duration-300 ease-in-out ${
                   activeHref === item.href ? "scale-x-100" : "scale-x-0"
-                } group-hover:scale-x-100`}
+                } group-hover:scale-x-100 group-hover:bg-white`}
                 style={{ transformOrigin: "left" }}
               />
             </motion.a>

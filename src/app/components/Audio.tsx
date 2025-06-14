@@ -35,6 +35,7 @@ export default function Audio() {
 
     window.addEventListener("click", playOnInteraction);
     return () => window.removeEventListener("click", playOnInteraction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

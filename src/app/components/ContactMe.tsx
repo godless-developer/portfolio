@@ -66,7 +66,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className=" px-8 pt-40 absolute z-10 top-1610 h-[1140px] md:top-1080 flex flex-col justify-between items-center"
+      className=" px-8 pt-40 absolute z-10 top-1610 h-[1180px] md:top-1080 flex flex-col justify-between items-center"
     >
       <div className="container">
         <motion.div
@@ -305,7 +305,7 @@ const ContactMe = () => {
                     </Button>
                     <div className="w-full flex gap-2 ">
                       <Link
-                        href={"https://m.me/9756331654424094"}
+                        href={"https://m.me/battulgabatjargal.batuk"}
                         target="_blank"
                         className="w-1/2 text-center backdrop-blur-[12px] hover:text-cyan-800 transition-all duration-300 rounded-lg p-1.5 flex justify-center items-center gap-2"
                       >

@@ -49,7 +49,7 @@ export default function HomeClient() {
           <ContactMe />
         </div>
       </main>
-      <footer className="flex items-center justify-center w-full h-20 bg-white/10 backdrop-blur-[7px] absolute md:top-1340 top-1865 z-10">
+      <footer className="flex items-center justify-center w-full h-20 bg-white/10 backdrop-blur-[7px] absolute md:top-1340 top-1880 z-10">
         <div className="container flex items-center justify-between w-full px-4">
           <p className="text-sm text-gray-400 ">
             © 2025 - {t("Built with heart , powered by soul")}
@@ -75,7 +75,7 @@ export default function HomeClient() {
               </span>
             </Link>
             <Link
-              href="https://www.instagram.com/direct/t/105881257478839"
+              href="https://www.instagram.com/bt_tulgaagd?igsh=bnN3bTRxeXVpdjV1&utm_source=qr"
               target="_blank"
               className="group flex items-center gap-2"
             >

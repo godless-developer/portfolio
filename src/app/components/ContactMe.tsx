@@ -305,9 +305,7 @@ const ContactMe = () => {
                     </Button>
                     <div className="w-full flex gap-2 ">
                       <Link
-                        href={
-                          "https://www.messenger.com/e2ee/t/9756331654424094"
-                        }
+                        href={"https://m.me/9756331654424094"}
                         target="_blank"
                         className="w-1/2 text-center backdrop-blur-[12px] hover:text-cyan-800 transition-all duration-300 rounded-lg p-1.5 flex justify-center items-center gap-2"
                       >

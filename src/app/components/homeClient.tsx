@@ -41,7 +41,7 @@ export default function HomeClient() {
           alt="bg"
           className="w-full h-screen object-cover bg-center z-0 fixed"
         ></Image>
-        <div className="absolute z-10 backdrop-blur-[10px] flex flex-col items-center  justify-center w-full h-[7470px] md:h-[5440px]">
+        <div className="absolute z-10 backdrop-blur-[10px] flex flex-col items-center  justify-center w-full h-[7550px] md:h-[5440px]">
           <HeroSection />
           <AboutSection />
           <SkillsSection />
